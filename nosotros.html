@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Westcon Comstor Americas</title>
+    <link rel="stylesheet" href="wca-font/wca-font.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="pushbar/pushbar.css">
+    <link href="timeline/dist/css/timeline.min.css" rel="stylesheet">
+
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="westcon-news/css/settings.css">
+    <!-- REVOLUTION LAYERS STYLES -->
+    <style>
+        .tp-caption.Newspaper-Button,
+        .Newspaper-Button {
+            color: rgba(255, 255, 255, 1.00);
+            font-size: 13px;
+            line-height: 17px;
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'wca-regular';
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0);
+            border-color: rgba(255, 255, 255, 0.25);
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 0px 0px 0px 0px;
+            letter-spacing: 2px
+        }
+
+        .tp-caption.Newspaper-Button:hover,
+        .Newspaper-Button:hover {
+            color: rgba(0, 0, 0, 1.00);
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 1.00);
+            border-color: rgba(255, 255, 255, 1.00);
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 0px 0px 0px 0px;
+            cursor: pointer
+        }
+
+        .tp-caption.Newspaper-Subtitle,
+        .Newspaper-Subtitle {
+            color: rgba(168, 216, 238, 1.00);
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'wca-regular';
+            text-decoration: none;
+            background-color: transparent;
+            border-color: transparent;
+            border-style: none;
+            border-width: 0px;
+            border-radius: 0 0 0 0px
+        }
+
+        .tp-caption.Newspaper-Title,
+        .Newspaper-Title {
+            color: rgba(255, 255, 255, 1.00);
+            font-size: 50px;
+            line-height: 55px;
+            font-weight: 400;
+            font-style: normal;
+            font-family: "wca-light";
+            text-decoration: none;
+            background-color: transparent;
+            border-color: transparent;
+            border-style: none;
+            border-width: 0px;
+            border-radius: 0 0 0 0px
+        }
+
+    </style>
+    <style type="text/css">
+        .erinyen .tp-tab-title {
+            color: rgb(168, 216, 238);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: "wca-light";
+            margin-bottom: 5px;
+            line-height: 15px
+        }
+
+        .erinyen .tp-tab-desc {
+            font-size: 18px;
+            font-weight: 100;
+            color: rgb(255, 255, 255);
+            line-height: 25px;
+            font-family: "wca-light"
+        }
+
+    </style>
+    <style>
+
+        /*** RADIAL PROGRESS ***/
+        /* Circumference = 2πr */
+        /* π = 3.1415926535898 */
+        /* r = 35 */
+
+        svg.radial-progress {
+            height: auto;
+            max-width: 200px;
+
+            transform: rotate(-90deg);
+            width: 100%;
+        }
+
+        svg.radial-progress circle {
+            fill: rgba(0, 0, 0, 0);
+            stroke: #fff;
+            stroke-dashoffset: 219.91148575129;
+            /* Circumference */
+            stroke-width: 2;
+        }
+
+        svg.radial-progress circle.incomplete {
+            opacity: 0.25;
+        }
+
+        svg.radial-progress circle.complete {
+            stroke-dasharray: 219.91148575129;
+            /* Circumference */
+        }
+
+        svg.radial-progress text {
+            fill: #000;
+            font: 400 1em/1 'Oswald', sans-serif;
+            text-anchor: middle;
+        }
+
+        /*** COLORS ***/
+        /* Primary */
+
+        svg.radial-progress:nth-of-type(6n+1) circle {
+            stroke: #a2ed56;
+        }
+
+        /* Secondary */
+
+        svg.radial-progress:nth-of-type(6n+2) circle {
+            stroke: #83e4e2;
+        }
+
+        /* Tertiary */
+
+        svg.radial-progress:nth-of-type(6n+3) circle {
+            stroke: #fd6470;
+        }
+
+        /* Quaternary */
+
+        svg.radial-progress:nth-of-type(6n+4) circle {
+            stroke: #fca858;
+        }
+
+        /* Quinary */
+
+        svg.radial-progress:nth-of-type(6n+5) circle {
+            stroke: #fddc32;
+        }
+    </style>
+
+
+    <!-- ADD-ONS CSS FILES -->
+
+    <!-- ADD-ONS JS FILES -->
+
+</head>
+
+<body>
+
+    <aside data-pushbar-id="left" class="pushbar from_left aside side-nav">
+        <ul class="" id="custom-aside">
+            <li>
+                <button data-pushbar-close type="button" class="close p-2 m-2" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
+            <li>
+                <div class="logo-wrapper waves-light waves-effect waves-light">
+                    <a href="#"><img src="img/svg/westcon-logo.svg" class="img-fluid flex-center"></a>
+                </div>
+            </li>
+            <li>
+                <ul class="social d-flex justify-content-around">
+                    <li><a href="#" class="icons-sm fb-ic"><i class="fab fa-facebook-f fa-lg"> </i></a></li>
+                    <li><a href="#" class="icons-sm tw-ic"><i class="fab fa-twitter fa-lg"> </i></a></li>
+                    <li><a href="#" class="icons-sm gplus-ic"><i class="fas fa-shopping-cart fa-lg"></i></a></li>
+                </ul>
+
+            </li>
+            <li>
+                <ul class="collapsible collapsible-accordion" id="aside-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li class="">
+                        <a class="waves-effect arrow-r" data-toggle="collapse" href="#collapseExample">Portafolio<i class="fas fa-angle-down rotate-icon ml-2"></i></a>
+                        <div class="collapse menuAside" id="collapseExample">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="waves-effect">Soluciones</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">Marcas e información</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="waves-effect">Servicios</a></li>
+                    <li><a href="#" class="waves-effect">Carreras Profesionales</a></li>
+                    <li><a href="#" class="waves-effect">Programas de Educación</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Navbar Mobile -->
+    <nav class="navbar fixed-top navbar-light white d-lg-none pt-4 background-image">
+
+        <a class="navbar-brand" href="index.html"><img src="img/svg/westcon-logo.svg" width="180" alt=""></a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-pushbar-target="left" aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars fa-lg"></i>
+        </button>
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Navbar DESKTOP -->
+    <nav class="navbar navbar-expand-lg d-none d-lg-flex fixed-top navbar-light white pt-4 background-image">
+        <a class="navbar-brand" href="index.html"><img src="img/svg/westcon-logo.svg" width="180" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portafolio
+                    </a>
+                    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="#">Soluciones</a>
+                        <a class="dropdown-item" href="#">Marcas e información</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Carreras Profesionales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Programas de Educación</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                        <i class="fas fa-shopping-cart fa-2x green-color"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 py-5 separador"></div>
+        </div>
+    </div>
+
+    <!-- START REVOLUTION SLIDER    -->
+    <div id="rev_slider_38_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="westcon-news" data-source="gallery" style="margin:0px auto;background:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <!-- START REVOLUTION SLIDER 5.4.8.1 fullwidth mode -->
+        <div id="rev_slider_38_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.8.1">
+            <ul>
+                <!-- SLIDE  -->
+                <li data-index="rs-158" data-transition="crossfade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/100x50_a60b8-westcon2.jpg" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Bienvenido a" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="Westcon-Comstor México, una división de SYNNEX Corporation">
+                    <!-- MAIN IMAGE -->
+                    <img src="westcon-news/assets/a60b8-westcon2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" id="slide-158-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0,0,0,0.35);"> </div>
+
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption Newspaper-Title   tp-resizeme" id="slide-158-layer-1" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['165','135','105','130']" data-fontsize="['50','50','50','30']" data-lineheight="['55','55','55','35']" data-width="['600','600','600','420']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; letter-spacing: ;">Westcon-Comstor México,
+                        una división de SYNNEX Corporation </div>
+
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption Newspaper-Subtitle   tp-resizeme" id="slide-158-layer-2" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['140','110','80','100']" data-fontsize="['25','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 25px; letter-spacing: ;">Bienvenido a </div>
+
+                    <!-- LAYER NR. 4 -->
+                    <div class="tp-caption Newspaper-Button rev-btn " id="slide-158-layer-5" data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" data-y="['top','top','top','top']" data-voffset="['361','331','301','245']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bc:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; letter-spacing: ;border-color:rgba(255,255,255,0.25);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><a href="http://facebook.com" class="white-text" target="_blank">Leer más</a> </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-159" data-transition="crossfade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/100x50_a60b8-westcon3.jpg" data-rotate="0" data-saveperformance="off" data-title="Servicios" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="Ampliando sus capacidades, capacidad y cobertura">
+                    <!-- MAIN IMAGE -->
+                    <img src="westcon-news/assets/a60b8-westcon3.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 5 -->
+                    <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" id="slide-159-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0,0,0,0.35);"> </div>
+
+                    <!-- LAYER NR. 6 -->
+                    <div class="tp-caption Newspaper-Title   tp-resizeme" id="slide-159-layer-1" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['165','135','105','130']" data-fontsize="['50','50','50','30']" data-lineheight="['55','55','55','35']" data-width="['678','600','600','420']" data-height="['176','none','none','none']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 678px; max-width: 678px; max-width: 176px; max-width: 176px; white-space: normal; letter-spacing: ;">Ampliando sus capacidades, capacidad y cobertura </div>
+
+                    <!-- LAYER NR. 7 -->
+                    <div class="tp-caption Newspaper-Subtitle   tp-resizeme" id="slide-159-layer-2" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['140','110','80','100']" data-fontsize="['25','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 25px; letter-spacing: ;">SERVICIOS </div>
+
+                    <!-- LAYER NR. 8 -->
+                    <div class="tp-caption Newspaper-Button rev-btn " id="slide-159-layer-5" data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" data-y="['top','top','top','top']" data-voffset="['361','331','301','245']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bc:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; letter-spacing: ;border-color:rgba(255,255,255,0.25);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Leer más </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-160" data-transition="crossfade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/100x50_a60b7-westcon1.jpg" data-rotate="0" data-saveperformance="off" data-title="Westcon-Comstor Cloud" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="Transformando su negocio en la nube">
+                    <!-- MAIN IMAGE -->
+                    <img src="westcon-news/assets/a60b7-westcon1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 9 -->
+                    <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" id="slide-160-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0,0,0,0.35);"> </div>
+
+                    <!-- LAYER NR. 10 -->
+                    <div class="tp-caption Newspaper-Title   tp-resizeme" id="slide-160-layer-1" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['165','135','105','130']" data-fontsize="['50','50','50','30']" data-lineheight="['55','55','55','35']" data-width="['600','600','600','420']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; letter-spacing: ;">
+                        Transformando su negocio en la nube </div>
+
+                    <!-- LAYER NR. 11 -->
+                    <div class="tp-caption Newspaper-Subtitle   tp-resizeme" id="slide-160-layer-2" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['140','110','80','100']" data-fontsize="['25','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 25px; letter-spacing: ;">Westcon-Comstor Cloud </div>
+
+                    <!-- LAYER NR. 12 -->
+                    <div class="tp-caption Newspaper-Button rev-btn " id="slide-160-layer-5" data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" data-y="['top','top','top','top']" data-voffset="['361','331','301','245']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bc:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; letter-spacing: ;border-color:rgba(255,255,255,0.25);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Leer más </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-161" data-transition="crossfade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/100x50_0b57a-westcon4.jpg" data-rotate="0" data-saveperformance="off" data-title="  Soluciones de implementación global" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="Ampliando su alcance global">
+                    <!-- MAIN IMAGE -->
+                    <img src="westcon-news/assets/0b57a-westcon4.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 13 -->
+                    <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" id="slide-161-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0,0,0,0.35);"> </div>
+
+                    <!-- LAYER NR. 14 -->
+                    <div class="tp-caption Newspaper-Title   tp-resizeme" id="slide-161-layer-1" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['165','135','105','130']" data-fontsize="['50','50','50','30']" data-lineheight="['55','55','55','35']" data-width="['600','600','600','420']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; letter-spacing: ;">Ampliando su alcance global </div>
+
+                    <!-- LAYER NR. 15 -->
+                    <div class="tp-caption Newspaper-Subtitle   tp-resizeme" id="slide-161-layer-2" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['140','110','80','100']" data-fontsize="['25','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 25px; letter-spacing: ;">Soluciones de implementación global </div>
+
+                    <!-- LAYER NR. 16 -->
+                    <div class="tp-caption Newspaper-Button rev-btn " id="slide-161-layer-5" data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" data-y="['top','top','top','top']" data-voffset="['361','331','301','245']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bc:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; letter-spacing: ;border-color:rgba(255,255,255,0.25);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Leer más </div>
+                </li>
+            </ul>
+            <div class="tp-bannertimer" style="height: 5px; background: rgba(166,216,236,1);"></div>
+        </div>
+    </div><!-- END REVOLUTION SLIDER -->
+
+
+    <section id="about" class="full mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="titulo">Over <span class="subtitulo orange-color ml-3">View</span></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 card-body border-left">
+                            <p class="card-text text-justify text-black-50"><span class="font-weight-bold">SYNNEX Corporation</span>, a business process services company, provides business-to-business services that help our customers and business partners grow and enhance their customer-engagement strategies. Headquartered in Fremont, CA, and with global operations, SYNNEX is an industry leader in IT distribution and customer care outsourced services, operating in two business segments: Technology Solutions and Concentrix. SYNNEX is listed on the New York Stock Exchange (NYSE: SNX) and was ranked 169 on the 2018 Fortune 200</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/qer9Kvvk9ZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="filosofia" class="full mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="titulo text-center my-5">NUESTRA <span class="green-color">FILOSOFIA</span> &amp; <span class="blue-color">VALORES</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-10">
+                    <h4 class="text-black-50 mb-5">SYNNEX strives to make its commitments a reality. We expect our staff to demonstrate:</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="md-v-line"></div><i class="far fa-check-circle mr-3 orange-color"></i> <span class="orange-color">Integrity:</span> Adhere to moral and ethical values, measured by personal conduct on a daily basis. Model sincerity, honesty, and candor in the workplace.
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line"></div><i class="far fa-check-circle mr-3 orange-color"></i><span class="orange-color">Continuous learning:</span> Seek opportunities to acquire knowledge or skills by means of study, practice, and/or experience. Find new ideas and creative solutions. Closely observe and learn from peers as well as discovering opportunities for self-development through new work assignments.
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line"></div><i class="far fa-check-circle mr-3 orange-color"></i><span class="orange-color">Strong work ethic:</span> Believe in the moral benefit of working to achieve outstanding results and, in doing so, be both a formal and an informal role model to others. Be known as hardworking and tenacious – exhibiting a strong and positive attitude toward aggressive personal, team, and company goal attainment.
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line"></div><i class="far fa-check-circle mr-3 orange-color"></i><span class="orange-color">Quality of Work:</span> Strive for achievement. Attain the highest levels of performance in everything you do. Demand the best and be held accountable for all results. Do the job right, the first time.
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line"></div><i class="far fa-check-circle mr-3 orange-color"></i><span class="orange-color">Commitment:</span> Be committed to your role and immediate organization and to the long-term success of the company. Inspire trust and respect in others. Be recognized as an individual who “walks the walk.” This mindset manifests itself internally with all colleagues, as well as externally with customers and vendors.
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line"></div><i class="far fa-check-circle mr-3 orange-color"></i><span class="orange-color">Teamwork:</span> Be a cooperative, participative team member. Be generous with time and ideas when involved in team or organizational activities. Understand the value of leveraging strengths by working together. Look for opportunities to share credit with colleagues and team participants.
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line"></div><i class="far fa-check-circle mr-3 orange-color"></i><span class="orange-color">Execution and Results:</span> Consistently achieve business results through continuous focus on velocity and process improvement. Be adept at delivering bottom line results. Effectively gain necessary support to improve execution and be responsive to cross-functional requests.
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line"></div><i class="far fa-check-circle mr-3 orange-color"></i><span class="orange-color">Respect for the Individual:</span> Build effective working relationships at multiple organizational levels – both inside and outside your own business group. Exhibit a sincere belief that people add value. Treat others with respect and dignity. Consistently demonstrate a genuine ability and interest to listen and learn from others as well as consider other points of view.
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line"></div><i class="far fa-check-circle mr-3 orange-color"></i><span class="orange-color">Manageable Risks:</span> Exhibit a high level of initiative and creativity. Improve processes to support company or organizational objectives and be comfortable with the risks associated with challenging the status quo. Develop and assess worst case scenarios to mitigate unnecessary risk and make the best decision possible.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="velocidad" class="full mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="titulo">Nuestra <span class="subtitulo aqua-color ml-3">Velocidad</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-5">
+                    <div class="row">
+                        <div class="col-4 col-md-2 card-body text-center">
+                            <img src="img/visibilidad-icon.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-8 card-body">
+                            <p class="card-text">
+                                Visible and transparent actions allow us to see progress and barriers to success. This visibility provides accurate and timely information about challenges and opportunities, allowing us to be proactive in our actions and decision-making.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <div class="row justify-content-around">
+                    <div class="col-6 col-lg-2">
+                        <svg class="radial-progress" data-percentage="82" viewBox="0 0 80 80">
+                            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">82%</text>
+                        </svg>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <svg class="radial-progress" data-percentage="33" viewBox="0 0 80 80">
+                            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 147.3406954533613;"></circle>
+                            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">33%</text>
+                        </svg>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <svg class="radial-progress" data-percentage="71" viewBox="0 0 80 80">
+                            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 63.774330867872806;"></circle>
+                            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">71%</text>
+                        </svg>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <svg class="radial-progress" data-percentage="24" viewBox="0 0 80 80">
+                            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 167.13272917097697;"></circle>
+                            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">24%</text>
+                        </svg>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <svg class="radial-progress" data-percentage="100" viewBox="0 0 80 80">
+                            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 0;"></circle>
+                            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">100%</text>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="historia" class="full mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="timeline">
+                        <div class="timeline__wrap">
+                            <div class="timeline__items">
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2018</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
+                                            ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2015</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2014</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2012</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2010</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
+                                            ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2007</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2004</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2002</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="js/mdb.min.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="westcon-news/js/jquery.themepunch.tools.min.js"></script>
+    <script src="westcon-news/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="westcon-news/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="westcon-news/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="westcon-news/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="westcon-news/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="westcon-news/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="westcon-news/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="westcon-news/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="westcon-news/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="westcon-news/js/extensions/revolution.extension.video.min.js"></script>
+
+
+    <script>
+        function setREVStartSize(e) {
+            try {
+                e.c = jQuery(e.c);
+                var i = jQuery(window).width(),
+                    t = 9999,
+                    r = 0,
+                    n = 0,
+                    l = 0,
+                    f = 0,
+                    s = 0,
+                    h = 0;
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
+                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                    var u = (e.c.width(), jQuery(window).height());
+                    if (void 0 != e.fullScreenOffsetContainer) {
+                        var c = e.fullScreenOffsetContainer.split(",");
+                        if (c) jQuery.each(c, function(e, i) {
+                            u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                        }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                    }
+                    f = u
+                } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                e.c.closest(".rev_slider_wrapper").css({
+                    height: f
+                })
+            } catch (d) {
+                console.log("Failure at Presize of Slider:" + d)
+            }
+        };
+
+    </script>
+
+    <script type="text/javascript">
+        var revapi38,
+            tpj;
+        (function() {
+            if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+            else onLoad();
+
+            function onLoad() {
+                if (tpj === undefined) {
+                    tpj = jQuery;
+                    if ("off" == "on") tpj.noConflict();
+                }
+                if (tpj("#rev_slider_38_1").revolution == undefined) {
+                    revslider_showDoubleJqueryError("#rev_slider_38_1");
+                } else {
+                    revapi38 = tpj("#rev_slider_38_1").show().revolution({
+                        sliderType: "standard",
+                        jsFileLocation: "westcon-news/js/",
+                        sliderLayout: "fullwidth",
+                        dottedOverlay: "none",
+                        delay: 9000,
+                        navigation: {
+                            keyboardNavigation: "on",
+                            keyboard_direction: "horizontal",
+                            mouseScrollNavigation: "off",
+                            mouseScrollReverse: "default",
+                            onHoverStop: "on",
+                            touch: {
+                                touchenabled: "on",
+                                touchOnDesktop: "off",
+                                swipe_threshold: 75,
+                                swipe_min_touches: 1,
+                                swipe_direction: "horizontal",
+                                drag_block_vertical: false
+                            },
+                            arrows: {
+                                style: "gyges",
+                                enable: true,
+                                hide_onmobile: false,
+                                hide_over: 778,
+                                hide_onleave: false,
+                                tmp: '',
+                                left: {
+                                    h_align: "right",
+                                    v_align: "bottom",
+                                    h_offset: 40,
+                                    v_offset: 0
+                                },
+                                right: {
+                                    h_align: "right",
+                                    v_align: "bottom",
+                                    h_offset: 0,
+                                    v_offset: 0
+                                }
+                            },
+                            tabs: {
+                                style: "erinyen",
+                                enable: true,
+                                width: 250,
+                                height: 100,
+                                min_width: 250,
+                                wrapper_padding: 10,
+                                wrapper_color: "rgba(76,217,100,0.2)",
+                                tmp: '<div class="tp-tab-title">{{title}}</div><div class="tp-tab-desc">{{description}}</div>',
+                                visibleAmount: 3,
+                                hide_onmobile: true,
+                                hide_under: 778,
+                                hide_onleave: false,
+                                hide_delay: 200,
+                                direction: "vertical",
+                                span: true,
+                                position: "inner",
+                                space: 10,
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 0,
+                                v_offset: 0
+                            }
+                        },
+                        viewPort: {
+                            enable: true,
+                            outof: "pause",
+                            visible_area: "80%",
+                            presize: false
+                        },
+                        responsiveLevels: [1240, 1024, 778, 480],
+                        visibilityLevels: [1240, 1024, 778, 480],
+                        gridwidth: [1240, 1024, 778, 480],
+                        gridheight: [500, 450, 400, 350],
+                        lazyType: "none",
+                        parallax: {
+                            type: "scroll",
+                            origo: "enterpoint",
+                            speed: 400,
+                            speedbg: 0,
+                            speedls: 0,
+                            levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 47, 48, 49, 50, 51, 55],
+                        },
+                        shadow: 0,
+                        spinner: "off",
+                        stopLoop: "off",
+                        stopAfterLoops: -1,
+                        stopAtSlide: -1,
+                        shuffle: "off",
+                        autoHeight: "off",
+                        hideThumbsOnMobile: "off",
+                        hideSliderAtLimit: 0,
+                        hideCaptionAtLimit: 0,
+                        hideAllCaptionAtLilmit: 0,
+                        debugMode: false,
+                        fallbacks: {
+                            simplifyAll: "off",
+                            nextSlideOnWindowFocus: "off",
+                            disableFocusListener: false,
+                        }
+                    });
+                }; /* END OF revapi call */
+            }; /* END OF ON LOAD FUNCTION */
+        }()); /* END OF WRAPPING FUNCTION */
+
+    </script>
+
+
+
+
+
+    <script src="pushbar/pushbar.js"></script>
+    <script src="timeline/dist/js/timeline.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(function() {
+            jQuery('.timeline').timeline({
+                //forceVerticalMode: 700,
+                mode: 'vertical',
+                verticalStartPosition: 'right',
+                visibleItems: 3,
+                verticalTrigger: '15%'
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        var pushbar = new Pushbar({
+            blur: true,
+            overlay: true,
+        });
+        //close all pushbars
+        pushbar.close();
+
+    </script>
+    <script>
+        $(function() {
+
+            // Remove svg.radial-progress .complete inline styling
+            $('svg.radial-progress').each(function(index, value) {
+                $(this).find($('circle.complete')).removeAttr('style');
+            });
+
+            // Activate progress animation on scroll
+            $(window).scroll(function() {
+                $('svg.radial-progress').each(function(index, value) {
+                    // If svg.radial-progress is approximately 25% vertically into the window when scrolling from the top or the bottom
+                    if (
+                        $(window).scrollTop() > $(this).offset().top - ($(window).height() * 0.75) &&
+                        $(window).scrollTop() < $(this).offset().top + $(this).height() - ($(window).height() * 0.25)
+                    ) {
+                        // Get percentage of progress
+                        percent = $(value).data('percentage');
+                        // Get radius of the svg's circle.complete
+                        radius = $(this).find($('circle.complete')).attr('r');
+                        // Get circumference (2πr)
+                        circumference = 2 * Math.PI * radius;
+                        // Get stroke-dashoffset value based on the percentage of the circumference
+                        strokeDashOffset = circumference - ((percent * circumference) / 100);
+                        // Transition progress for 1.25 seconds
+                        $(this).find($('circle.complete')).animate({
+                            'stroke-dashoffset': strokeDashOffset
+                        }, 1250);
+                    }
+                });
+            }).trigger('scroll');
+
+        });
+
+    </script>
+
+</body>
+
+</html>

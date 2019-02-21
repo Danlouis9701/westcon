@@ -1,6 +1,11 @@
+body{
+    font-family: 'wca-light';
+}
+
+
 /*Estilos del menu*/
 .aside {
-    background: rgba(35,65,134,.8) !important;
+    background: #1db4cf !important;
 }
 .fixed-top {
     z-index: 900;
@@ -22,10 +27,96 @@
 }
 .side-nav .logo-wrapper img {
     height: auto;
-    padding: 20% 50px;
+    padding: 5% 25px;
 }
 
 .side-nav ul {
     list-style: none;
     padding-left: 0;
+}
+
+#aside-menu a {
+    display: block;
+    font-size: 1rem;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 20px;
+    color: white;
+}
+.logo-wrapper {
+    width: 100%;
+    height: auto;
+}
+.side-nav .social {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.side-nav .social li {
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    margin: 0;
+    display: inline-block;
+}
+.side-nav .social a {
+    display: block;
+    font-size: 1rem;
+    height: 56px;
+    line-height: 56px;
+    color: white;
+}
+
+.background-image {
+    background-image: url(../img/top-menu.jpg);
+    background-repeat: repeat-x;
+}
+
+.green-color {
+    color: #7ebc42;
+}
+.orange-color {
+    color: #f26522;
+}
+.blue-color {
+    color: #3179a3;
+}
+.aqua-color{
+    color: #015758;
+}
+
+.separador {
+    padding: 5rem 0;
+
+}
+
+.titulo {
+    font-size: 2.5rem;
+    color: #585858;
+}
+
+.subtitulo {
+    display: block;
+}
+
+
+/* Estilos del Nosotros */
+
+.border-left{
+    border-left: 2px solid #3179a3!important;
+}
+
+.full {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+}
+
+
+
+#filosofia {
+    background-color: #f8f8f8;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: none;
 }
