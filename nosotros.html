@@ -16,13 +16,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+
     <link rel="stylesheet" href="pushbar/pushbar.css">
     <link href="timeline/dist/css/timeline.min.css" rel="stylesheet">
-
     <!-- REVOLUTION STYLE SHEETS -->
     <link rel="stylesheet" type="text/css" href="westcon-news/css/settings.css">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
     <!-- REVOLUTION LAYERS STYLES -->
     <style>
         .tp-caption.Newspaper-Button,
@@ -85,7 +85,6 @@
             border-width: 0px;
             border-radius: 0 0 0 0px
         }
-
     </style>
     <style type="text/css">
         .erinyen .tp-tab-title {
@@ -105,7 +104,6 @@
             line-height: 25px;
             font-family: "wca-light"
         }
-
     </style>
     <style>
 
@@ -148,31 +146,31 @@
         /*** COLORS ***/
         /* Primary */
 
-        svg.radial-progress:nth-of-type(6n+1) circle {
-            stroke: #a2ed56;
+        svg.radial-progress:nth-of-type(1) circle{
+            stroke: #f26522;
         }
 
         /* Secondary */
 
-        svg.radial-progress:nth-of-type(6n+2) circle {
+        svg.radial-progress:nth-of-type(2) circle {
             stroke: #83e4e2;
         }
 
         /* Tertiary */
 
-        svg.radial-progress:nth-of-type(6n+3) circle {
+        svg.radial-progress:nth-of-type(3) circle {
             stroke: #fd6470;
         }
 
         /* Quaternary */
 
-        svg.radial-progress:nth-of-type(6n+4) circle {
+        svg.radial-progress:nth-of-type(4) circle {
             stroke: #fca858;
         }
 
         /* Quinary */
 
-        svg.radial-progress:nth-of-type(6n+5) circle {
+        svg.radial-progress:nth-of-type(5) circle {
             stroke: #fddc32;
         }
     </style>
@@ -209,7 +207,7 @@
             <li>
                 <ul class="collapsible collapsible-accordion" id="aside-menu">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
                     <li class="">
                         <a class="waves-effect arrow-r" data-toggle="collapse" href="#collapseExample">Portafolio<i class="fas fa-angle-down rotate-icon ml-2"></i></a>
                         <div class="collapse menuAside" id="collapseExample">
@@ -250,10 +248,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portafolio
@@ -382,10 +380,10 @@
                 <div class="col-12 col-lg-6 mb-5 mb-lg-0">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="titulo">Over <span class="subtitulo orange-color ml-3">View</span></h2>
+                            <h2 class="titulo display-3">Over <span class="subtitulo orange-color ml-5">View</span></h2>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row px-3 px-lg-0">
                         <div class="col-12 card-body border-left">
                             <p class="card-text text-justify text-black-50"><span class="font-weight-bold">SYNNEX Corporation</span>, a business process services company, provides business-to-business services that help our customers and business partners grow and enhance their customer-engagement strategies. Headquartered in Fremont, CA, and with global operations, SYNNEX is an industry leader in IT distribution and customer care outsourced services, operating in two business segments: Technology Solutions and Concentrix. SYNNEX is listed on the New York Stock Exchange (NYSE: SNX) and was ranked 169 on the 2018 Fortune 200</p>
                         </div>
@@ -404,7 +402,7 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="titulo text-center my-5">NUESTRA <span class="green-color">FILOSOFIA</span> &amp; <span class="blue-color">VALORES</span></h2>
+                            <h2 class="titulo display-4 text-center my-5">NUESTRA <span class="green-color">FILOSOFIA</span> &amp; <span class="blue-color">VALORES</span></h2>
                         </div>
                     </div>
                 </div>
@@ -452,7 +450,7 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="titulo">Nuestra <span class="subtitulo aqua-color ml-3">Velocidad</span></h2>
+                            <h2 class="titulo display-3">Nuestra <span class="subtitulo aqua-color ml-5">Velocidad</span></h2>
                         </div>
                     </div>
                 </div>
@@ -472,21 +470,21 @@
             <div class="col-12 mt-5">
                 <div class="row justify-content-around">
                     <div class="col-6 col-lg-2">
-                        <svg class="radial-progress" data-percentage="82" viewBox="0 0 80 80">
+                        <svg class="radial-progress" id="circle1" data-percentage="82" viewBox="0 0 80 80">
                             <circle class="incomplete" cx="40" cy="40" r="35"></circle>
                             <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
                             <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">82%</text>
                         </svg>
                     </div>
                     <div class="col-6 col-lg-2">
-                        <svg class="radial-progress" data-percentage="33" viewBox="0 0 80 80">
+                        <svg class="radial-progress" id="circle2" data-percentage="33" viewBox="0 0 80 80">
                             <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 147.3406954533613;"></circle>
-                            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">33%</text>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">92%</text>
                         </svg>
                     </div>
                     <div class="col-6 col-lg-2">
-                        <svg class="radial-progress" data-percentage="71" viewBox="0 0 80 80">
+                        <svg class="radial-progress" id="circle3" data-percentage="71" viewBox="0 0 80 80">
                             <circle class="incomplete" cx="40" cy="40" r="35"></circle>
                             <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 63.774330867872806;"></circle>
                             <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">71%</text>
@@ -495,8 +493,8 @@
                     <div class="col-6 col-lg-2">
                         <svg class="radial-progress" data-percentage="24" viewBox="0 0 80 80">
                             <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 167.13272917097697;"></circle>
-                            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">24%</text>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">74%</text>
                         </svg>
                     </div>
                     <div class="col-6 col-lg-2">
@@ -515,6 +513,26 @@
 
     <section id="historia" class="full mt-5">
         <div class="container">
+            <div class="row justify-content-around mb-5">
+                <div class="col-12 col-md-6 mb-5 mb-lg-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="titulo display-3">Nuestra <span class="subtitulo green-color ml-5">Historia</span></h2>
+                        </div>
+                    </div>
+                    <div class="row px-3 px-lg-0">
+                        <div class="col-12 card-body border-orange">
+                            <p class="card-text text-justify text-black-50"><span class="font-weight-bold">SYNNEX Corporation:</span> Building, Integrating and Expanding for over 30 years.</p>
+                            <p class="card-text text-justify text-black-50">Robert Huang, CEO and founder, created SYNNEX in 1980. Since then, SYNNEX has led the way in technology solutions growth, and continued to expand our business offerings through the smooth integration of acquisitions. Our single focus during this time has been to help our clients maximize their value from every customer engagement. The ability to acquire, integrate and grow organically has been one of our hallmark achievements for success.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="img/historia-img.jpg" alt="" class="img-fluid b-block mx-auto">
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-12">
 
@@ -523,52 +541,29 @@
                             <div class="timeline__items">
                                 <div class="timeline__item">
                                     <div class="timeline__content">
-                                        <h2>2018</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                            ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                        <h2 class="font-weight-bold">1994</h2>
+                                        <p>Changed name from Compac to SYNNEX</p>
+                                        <p>SYNNEX = Synergy + Nexus</p>
                                     </div>
                                 </div>
                                 <div class="timeline__item">
                                     <div class="timeline__content">
-                                        <h2>2015</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                                    </div>
-                                </div>
-                                <div class="timeline__item">
-                                    <div class="timeline__content">
-                                        <h2>2014</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                        <h2>2003</h2>
+                                        <img src="img/ipo.png" alt="Initial Public Offering" width="60" class="float-right">
+                                        <p>IPO (Initial Public Offering) on New York Stock Exchange (NYSE), ticker symbol SNX.</p>
                                     </div>
                                 </div>
                                 <div class="timeline__item">
                                     <div class="timeline__content">
                                         <h2>2012</h2>
+                                        <img src="img/100.png" alt="Initial Public Offering" width="100" class="float-left">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
                                     </div>
                                 </div>
                                 <div class="timeline__item">
                                     <div class="timeline__content">
-                                        <h2>2010</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                            ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                                <div class="timeline__item">
-                                    <div class="timeline__content">
-                                        <h2>2007</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                                    </div>
-                                </div>
-                                <div class="timeline__item">
-                                    <div class="timeline__content">
-                                        <h2>2004</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                                    </div>
-                                </div>
-                                <div class="timeline__item">
-                                    <div class="timeline__content">
-                                        <h2>2002</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
+                                        <h2>2015</h2>
+                                        <img src="img/associates.png" alt="Initial Public Offering" width="100" class="float-right">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
                                     </div>
                                 </div>
@@ -580,6 +575,254 @@
         </div>
     </section>
 
+    <section id="adquisiciones" class="full mt-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="titulo display-4">Acquisition <span class="orange-color">Timeline</span></h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="timeline" id="timeline2">
+                        <div class="timeline__wrap">
+                            <div class="timeline__items">
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2 class="font-weight-bold">2018</h2>
+                                        <p>CAcquired Convergys</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2017</h2>
+                                        <p>Acquired Westcon-Comstor Americas Acquired Tigerspike</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2016</h2>
+                                        <p>Acquired Minacs.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2014</h2>
+                                        <p>Acquired IBM Customer Care Business</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2013</h2>
+                                        <p>Acquired Supercom (Canada)</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2011</h2>
+                                        <p>Acquired gem (Ireland, Hungary)</p>
+                                        <p>Acquired e4e (India, Scotland, U.S.)</p>
+                                        <p>Acquired Marubeni Infotec (Japan)</p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content">
+                                        <h2>2010</h2>
+                                        <p>Acquired Jack of All Games</p>
+                                        <p>Acquired Encover, Inc.</p>
+                                        <p>Acquired Marubeni Infotec (Japan)Acquired Aspire Technology, Ltd. (UK)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ranking" class="full mt-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="titulo display-4">SYNNEX’ <span class="aqua-color">Fortune 500 Rankings</span></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <img src="img/trophy.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-group list-group-flush mx-auto">
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2018 &#124; No. 169
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2017 &#124; No. 198
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2016 &#124; No. 212
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2015 &#124; No. 220
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2014 &#124; No. 260
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2012 &#124; No. 262
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-group list-group-flush mx-auto">
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2012 &#124; No. 253
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2011 &#124; No. 225
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2010 &#124; No. 294
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2009 &#124; No. 328
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2008 &#124; No. 350
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-center h4">
+                            <div class="md-v-line"></div><i class="far fa-star 3x mr-4 gold-color float-left"></i>2007 &#124; No. 360
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="premios" class="full mt-5 py-3">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-12 text-center">
+                    <h2 class="titulo display-4">Premios y<span class="orange-color"> Reconocimientos</span></h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 card-body">
+                    <p class="card-text h5">
+                        The expertise of SYNNEX has been recognized worldwide, with a range of accolades and awards. Our vendors, resellers and clients are proud to call us partners as we continue to support their business strategies with best-in-class technology and business solutions.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="soluciones" class="full mt-5 py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="titulo display-4">Technology Solutions <span class="subtitulo blue-color ml-5">North America</span></h2>
+                </div>
+            </div>
+            <div class="row px-3 justify-content-around">
+                <div class="col-12 col-md-6 card-body border-orange mb-5 mb-lg-0">
+                    <ul class="list-group list-group-flush mx-auto">
+                        <li class="list-group-item h5 text-black-50">
+                            <span class="font-weight-bold black-text mr-3">2018</span> Aruba, Distributor of the Year in US. and Canada
+                        </li>
+                        <li class="list-group-item h5 text-black-50">
+                            <span class="font-weight-bold black-text mr-3">2017</span> Cisco, Distributor of the Year, Westcon-Comstor Americas, Latin America
+                        </li>
+                        <li class="list-group-item h5 text-black-50">
+                            <span class="font-weight-bold black-text mr-3">2017</span> FireEye, Global Distributor of the Year
+                        </li>
+                        <li class="list-group-item h5 text-black-50">
+                            <span class="font-weight-bold black-text mr-3">2017</span> Hewlett-Packard Enterprise (HPE) North America Distributor of the Year
+                        </li>
+                        <li class="list-group-item h5 text-black-50">
+                            <span class="font-weight-bold black-text mr-3">2017</span> Microsoft, Worldwide Microsoft Surface Partner of the Year
+                        </li>
+                        <li class="list-group-item h5 text-black-50">
+                            <span class="font-weight-bold black-text mr-3">2017</span> Red Hat, Commercial Distributor of the Year, North America
+                        </li>
+                        <li class="list-group-item h5 text-black-50">
+                            <span class="font-weight-bold black-text mr-3">2016</span> Google Cloud Global Partner Award for Devices Ecosystem Customer Success
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="img/historia-img.jpg" alt="" class="img-fluid b-block mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="social" class="full mt-5 py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="titulo display-3">Responsabilidad <span class="blue-color">Social</span></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Card -->
+                    <div class="card mb-4">
+                        <!--Card content-->
+                        <div class="card-body z-depth-1-half p-5">
+                            <!--Title-->
+                            <!--                            <h4 class="card-title text-center">Responsabilidad con la comunidad</h4>-->
+                            <!--Text-->
+                            <img src="img/line-green.png" alt="" class="d-block mx-auto mb-5">
+                            <p class="h5 text-black-50">At SYNNEX, we strongly believe in our corporate responsibility to enhance the communities in which we work and live. Through SYNNEX’ three pillars—Learning, Living and Leading—we drive initiatives designed to improve local economies, societies, and environments everywhere we operate.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <!--                            <button type="button" class="btn btn-light-blue btn-md">Read more</button>-->
+                            <img src="img/line-green.png" alt="" class="d-block mx-auto mt-5">
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="prefooter" class="container-fluid mx-0 px-0 py-5">
+        <div class="row mx-0 justify-content-center">
+            <div class="col-12 col-lg-3 px-4 text-center">
+                <img src="img/svg/westcon-logo.svg" class="img-fluid">
+                <h6 class="white-text mt-5">SYNNEX Corporation </h6>
+                <h6 class="white-text">44201 Nobel Drive,</h6>
+                <h6 class="white-text">Fremont, CA 94538</h6>
+            </div>
+            <div class="col-12 col-lg-3 px-4 mt-5 mt-md-0">
+                <h3 class="white-text mb-3 mb-md-5">Contacto</h3>
+                <h6 class="white-text mb-3"><i class="fas fa-envelope mr-4"></i>info@synnex.com.mx</h6>
+                <h6 class="white-text"><i class="fas fa-phone mr-4"></i>(01 55) 2122 7800</h6>
+            </div>
+            <div class="col-12 col-lg-3 px-4 mt-5 mt-md-0">
+                <h3 class="white-text mb-3 mb-md-5">Legales</h3>
+                <h6 class="white-text mb-3">Políticas de ventas</h6>
+                <h6 class="white-text mb-3">Política de devoluciones</h6>
+                <h6 class="white-text mb-3">Politica de crédito</h6>
+                <h6 class="white-text mb-3"><a href="#" class="white-text">Aviso de Privacidad</a></h6>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <p class="white-text derechos">Synnex and the SYNNEX LOGO are registered trademarks of SYNNEX Corporation in the United States and other countries. All other trademarks are property of their respective owners. ©2014 SYNNEX Corporation. All rights reserved. SYNNEX is Member of the Global Technology Distribution Council</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -641,7 +884,6 @@
                 console.log("Failure at Presize of Slider:" + d)
             }
         };
-
     </script>
 
     <script type="text/javascript">
@@ -670,7 +912,7 @@
                             keyboard_direction: "horizontal",
                             mouseScrollNavigation: "off",
                             mouseScrollReverse: "default",
-                            onHoverStop: "on",
+                            onHoverStop: "off",
                             touch: {
                                 touchenabled: "on",
                                 touchOnDesktop: "off",
@@ -732,7 +974,7 @@
                         responsiveLevels: [1240, 1024, 778, 480],
                         visibilityLevels: [1240, 1024, 778, 480],
                         gridwidth: [1240, 1024, 778, 480],
-                        gridheight: [500, 450, 400, 350],
+                        gridheight: [600, 450, 400, 350],
                         lazyType: "none",
                         parallax: {
                             type: "scroll",
@@ -763,7 +1005,6 @@
                 }; /* END OF revapi call */
             }; /* END OF ON LOAD FUNCTION */
         }()); /* END OF WRAPPING FUNCTION */
-
     </script>
 
 
@@ -773,62 +1014,7 @@
     <script src="pushbar/pushbar.js"></script>
     <script src="timeline/dist/js/timeline.min.js"></script>
     <script src="js/custom.js"></script>
-    <script>
-        $(function() {
-            jQuery('.timeline').timeline({
-                //forceVerticalMode: 700,
-                mode: 'vertical',
-                verticalStartPosition: 'right',
-                visibleItems: 3,
-                verticalTrigger: '15%'
-            });
-        });
-
-    </script>
-    <script type="text/javascript">
-        var pushbar = new Pushbar({
-            blur: true,
-            overlay: true,
-        });
-        //close all pushbars
-        pushbar.close();
-
-    </script>
-    <script>
-        $(function() {
-
-            // Remove svg.radial-progress .complete inline styling
-            $('svg.radial-progress').each(function(index, value) {
-                $(this).find($('circle.complete')).removeAttr('style');
-            });
-
-            // Activate progress animation on scroll
-            $(window).scroll(function() {
-                $('svg.radial-progress').each(function(index, value) {
-                    // If svg.radial-progress is approximately 25% vertically into the window when scrolling from the top or the bottom
-                    if (
-                        $(window).scrollTop() > $(this).offset().top - ($(window).height() * 0.75) &&
-                        $(window).scrollTop() < $(this).offset().top + $(this).height() - ($(window).height() * 0.25)
-                    ) {
-                        // Get percentage of progress
-                        percent = $(value).data('percentage');
-                        // Get radius of the svg's circle.complete
-                        radius = $(this).find($('circle.complete')).attr('r');
-                        // Get circumference (2πr)
-                        circumference = 2 * Math.PI * radius;
-                        // Get stroke-dashoffset value based on the percentage of the circumference
-                        strokeDashOffset = circumference - ((percent * circumference) / 100);
-                        // Transition progress for 1.25 seconds
-                        $(this).find($('circle.complete')).animate({
-                            'stroke-dashoffset': strokeDashOffset
-                        }, 1250);
-                    }
-                });
-            }).trigger('scroll');
-
-        });
-
-    </script>
+    <script src="js/custom-nosotros.js"></script>
 
 </body>
 

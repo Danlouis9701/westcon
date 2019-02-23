@@ -1,11 +1,17 @@
-body{
+
+body, h1, h2, h3, h4, h5, h6 {
     font-family: 'wca-light';
+    font-weight: 100;
 }
 
 
 /*Estilos del menu*/
 .aside {
-    background: #1db4cf !important;
+    background-color: #fff !important;
+    background-image: url(../img/top-menu.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+
 }
 .fixed-top {
     z-index: 900;
@@ -41,7 +47,7 @@ body{
     height: 56px;
     line-height: 56px;
     padding-left: 20px;
-    color: white;
+    color: #2c2c2c;
 }
 .logo-wrapper {
     width: 100%;
@@ -62,7 +68,7 @@ body{
     font-size: 1rem;
     height: 56px;
     line-height: 56px;
-    color: white;
+    color: #3179a3;
 }
 
 .background-image {
@@ -82,14 +88,25 @@ body{
 .aqua-color{
     color: #015758;
 }
+.gold-color{
+    color: #ffd15c;
+}
 
 .separador {
     padding: 5rem 0;
-
+    margin-top: 0.4rem;
+}
+.bg-orange {
+    background-color: rgba(242, 101, 34, 0.50);
+}
+.bg-blue{
+    background-color: rgba(49, 121, 163, 0.5);
+}
+.bg-green{
+    background-color: rgba(126, 188, 66, 0.50);
 }
 
 .titulo {
-    font-size: 2.5rem;
     color: #585858;
 }
 
@@ -104,10 +121,38 @@ body{
     border-left: 2px solid #3179a3!important;
 }
 
+.border-orange{
+    border-left:2px solid #f26522!important;
+}
+.border-purple{
+    border-left: 2px solid #92278f!important;
+}
+.py-10{
+    padding: 6rem 0;
+}
 .full {
     width: 100%;
     height: auto;
     padding: 2rem 0;
+}
+
+.timeline__item:after {
+    background-color: #3179a3!important;
+    border: 1px solid #3179a3!important;
+}
+.timeline:not(.timeline--horizontal):before {
+    background-color: #3179a3!important;
+    width: 2px!important;
+}
+
+#timeline2 .timeline__item:after {
+    background-color: #7ebc42!important;
+    border: 1px solid #7ebc42!important;
+}
+
+#timeline2.timeline:not(.timeline--horizontal):before {
+    background-color: #7ebc42!important;
+    width: 2px!important;
 }
 
 
@@ -119,4 +164,55 @@ body{
 .list-group-item {
     background-color: transparent;
     border: none;
+}
+
+.timeline__content h2 {
+    font-family: wca-bold;
+    font-size: 1.25rem;
+
+}
+.timeline__content p {
+    font-family: wca-light;
+}
+
+#adquisiciones {
+    background-color: #f8f8f8;
+}
+
+#premios {
+    background-color: #f8f8f8;
+}
+
+#prefooter{
+     background-color: #0c7082;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #1db4cf;
+}
+
+.bg-image {
+    background-image: url(../img/rec2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    width: 100%;
+    min-height: 300px;
+    max-height: 600px;
+    background-image: url(../img/marcas-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#soluciones-banner{
+    background-image: url(../img/soluciones-bg.jpg);
+}
+
+.derechos {
+    font-size: 0.75rem;
 }
