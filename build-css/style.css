@@ -1,17 +1,26 @@
-
 body, h1, h2, h3, h4, h5, h6 {
     font-family: 'wca-light';
     font-weight: 100;
 }
 
+.wca-bold{
+    font-family: 'wca-bold';
+}
+
+.wca-regular{
+    font-family: 'wca-regular';
+}
+
+.display-4 {
+    font-size: 2.5rem;
+}
 
 /*Estilos del menu*/
 .aside {
-    background-color: #fff !important;
+    background-color: #fff!important;
     background-image: url(../img/top-menu.jpg);
     background-repeat: no-repeat;
     background-position: top;
-
 }
 .fixed-top {
     z-index: 900;

@@ -1,0 +1,27 @@
+{
+  "name": "westcon",
+  "version": "1.0.0",
+  "description": "Compresion de archivos CSS y Js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danlouis9701/westcon.git"
+  },
+  "author": "Daniel Nieto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danlouis9701/westcon/issues"
+  },
+  "homepage": "https://github.com/Danlouis9701/westcon#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
+  }
+}

@@ -16,10 +16,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Pushbar CSS -->
     <link rel="stylesheet" href="pushbar/pushbar.css">
-
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
     <!-- REVOLUTION STYLE SHEETS -->
     <link rel="stylesheet" type="text/css" href="westcon-news/css/settings.css">
     <!-- REVOLUTION LAYERS STYLES -->
@@ -105,14 +105,57 @@
         }
     </style>
 
+    <style>
+        /*** Preloader ***/
 
-    <!-- ADD-ONS CSS FILES -->
+        body{
+            overflow: hidden;
+        }
 
-    <!-- ADD-ONS JS FILES -->
+         #preloader {
+             position: fixed;
+             height: 100vh;
+             width: 100vw;
+             background-color: #fff;
+             z-index: 10000;
+         }
+
+         #loader {
+             width: 300px;
+             height: 250px;
+             padding-top: 8rem;
+             position: relative;
+             left: 50%;
+             top: 30%;
+             margin: -100px 0 0 -150px;
+         }
+        @media only screen and (min-width:992px){
+             #loader {
+             width: 400px;
+             height: 350px;
+             padding-top: 8rem;
+             position: relative;
+             left: 50%;
+             top: 30%;
+             margin: -150px 0 0 -200px;
+         }
+        }
+    </style>
+
 
 </head>
 
 <body>
+
+    <!-------------------
+       Precargador
+    ------------------->
+    <div id="preloader">
+        <div id="loader">
+            <iframe src="preload/westcon.html" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
 
     <aside data-pushbar-id="left" class="pushbar from_left aside side-nav">
         <ul class="" id="custom-aside">
@@ -397,7 +440,7 @@
             <div class="row">
                 <div class="col-12 col-md-4">
                     <!-- Card -->
-                     <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg');">
+                    <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg');">
 
                         <!-- Content -->
                         <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
@@ -433,7 +476,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                     <!-- Card -->
-                     <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg');">
+                    <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg');">
 
                         <!-- Content -->
                         <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
@@ -675,10 +718,21 @@
 
 
     <script src="pushbar/pushbar.js"></script>
-    <script src="js/custom.js"></script>
-    <script type="text/javascript">
+    <script src="js/custom.min.js"></script>
+    <script>
+        $(window).on("load", function() {
+            setTimeout('delay()', 3500);
+        });
 
+        function delay() {
+            $('#preloader').fadeOut("slow");
+            $('body').css({
+                'overflow': 'visible'
+            });
+        }
     </script>
+
+
 
 </body>
 
