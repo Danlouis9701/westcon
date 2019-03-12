@@ -11,6 +11,10 @@ body, h1, h2, h3, h4, h5, h6 {
     font-family: 'wca-regular';
 }
 
+.display-3 {
+    font-size: 3.5rem;
+}
+
 .display-4 {
     font-size: 2.5rem;
 }
@@ -212,16 +216,12 @@ header{
     width: 100%;
     min-height: 300px;
     max-height: 600px;
-    background-image: url(../img/marcas-banner.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#soluciones-banner{
-    background-image: url(../img/soluciones-bg.jpg);
 }
 
 .derechos {
     font-size: 0.75rem;
 }
+
+ .altura-min {
+     min-height: 300px;
+ }
