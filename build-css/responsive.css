@@ -10,6 +10,12 @@
     .display-4 {
         font-size: 3.5rem;
     }
+    .bg-image {
+    background-image: url(../img/home/different-T.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    }
 }
 
 /*// Large devices (desktops, 992px and up)*/
@@ -17,6 +23,12 @@
     .altura-min {
          min-height: 450px;
      }
+    .bg-image {
+    background-image: url(../img/rec2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/

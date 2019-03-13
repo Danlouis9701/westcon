@@ -1,1 +1,1 @@
-@media (min-width:768px){.display-3{font-size:4.5rem}.display-4{font-size:3.5rem}}@media (min-width:992px){.altura-min{min-height:450px}}
+@media (min-width:768px){.display-3{font-size:4.5rem}.display-4{font-size:3.5rem}.bg-image{background-image:url(../img/home/different-T.jpg);background-repeat:no-repeat;background-position:bottom;background-size:cover}}@media (min-width:992px){.altura-min{min-height:450px}.bg-image{background-image:url(../img/rec2.jpg);background-repeat:no-repeat;background-position:center;background-size:cover}}
