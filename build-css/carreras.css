@@ -1,0 +1,12 @@
+#carreras-banner{
+    background-image: url(../img/banners/slider005-M.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+ @media only screen and (min-width:576px) {
+     #carreras-banner {
+         background-image: url(../img/banners/slider005.jpg);
+     }
+
+ }
