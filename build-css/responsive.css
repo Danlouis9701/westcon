@@ -1,35 +1,161 @@
-
 /* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+    html {
+        font-size: 13px;
+    }
+
+    .display-3 {
+        font-size: 3.5rem;
+    }
+}
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-    .display-3 {
-    font-size: 4.5rem;
+    html {
+        font-size: 14px;
     }
-    .display-4 {
+    #aside-menu a {
+        font-size: 2rem;
+        height: 55px;
+        line-height: 3.5rem;
+        margin-bottom: 2rem;
+    }
+    .display-3 {
         font-size: 3.5rem;
     }
-    .bg-image {
-    background-image: url(../img/home/different-T.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .amaranta-txt {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        z-index: 2;
+        font-family: 'Lato' !important;
+        margin-left: -370px;
+    }
+
+    #home-page {
+        background-image: url(../img/home_01_platillo.jpg);
+        background-size: contain;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+
+    .img-ingredientes {
+        position: absolute;
+        left: 30%;
+        top: 0;
+        z-index: 0;
+        margin-left: 0;
+    }
+
+    .img-carta {
+        position: absolute;
+        left: 40%;
+        top: 0;
+        z-index: -1;
+    }
+
+    #menu-page {
+        background-image: url(../img/Menu_Manos_Pablo.jpg);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 40%;
+    }
+
+    .box-carta {
+        width: 300px;
+        height: 300px;
+    }
+
+    .menu-title {
+        font-size: 2rem;
+    }
+
+    .menu-font {
+        font-size: 1.25rem;
+    }
+    /*Estilos del mapa*/
+    #map {
+        height: 400px;
     }
 }
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-    .altura-min {
-         min-height: 450px;
-     }
-    .bg-image {
-    background-image: url(../img/rec2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    html {
+        font-size: 15px;
+    }
+
+    #aside-menu a {
+        font-size: 2.2rem;
+    }
+
+    .display-3 {
+        font-size: 4.5rem;
+    }
+
+    .display-4 {
+        font-size: 2.2rem;
+    }
+
+    #home-page {
+        background-position: right;
+    }
+
+    .amaranta-txt {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        z-index: 2;
+        font-family: 'Lato' !important;
+        margin-left: -370px;
+    }
+
+    .img-ingredientes {
+        position: absolute;
+        left: 30%;
+        top: 0;
+        z-index: 0;
+        margin-left: 0;
+    }
+    #menu-page {
+        background-size: 50%;
+    }
+    #menu-page1 {
+        background-size: 40%;
+    }
+
+    .box-carta {
+        width: 300px;
+        height: 300px;
+    }
+    .menu-title {
+        font-size: 1.5rem;
+    }
+    .menu-font {
+        font-size: 1.15rem;
     }
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+     #aside-menu a {
+        font-size: 2.5rem;
+    }
+    .display-3 {
+        font-size: 4.5rem;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+    }
+     #menu-page {
+        background-size: 40%;
+    }
+
+}

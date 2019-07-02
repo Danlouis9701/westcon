@@ -1,34 +1,70 @@
-body, h1, h2, h3, h4, h5, h6 {
-    font-family: 'wca-light';
-    font-weight: 100;
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Vidaloka&display=swap');
+
+html {
+    font-size: 12px;
 }
 
-.wca-bold{
-    font-family: 'wca-bold';
+body {
+    font-family: 'Lato', sans-serif;
 }
 
-.wca-regular{
-    font-family: 'wca-regular';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+bold {
+    font-family: 'Vidaloka', serif;
+}
+
+.font-secundaria {
+    font-family: 'Vidaloka', serif;
 }
 
 .display-3 {
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .display-4 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+}
+
+/*Estilos de los bulletes*/
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #65243c;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    background-color: #65243c;
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: #65233c;
 }
 
 /*Estilos del menu*/
 .aside {
-    background-color: #fff!important;
-    background-image: url(../img/top-menu.jpg);
-    background-repeat: no-repeat;
-    background-position: top;
+    background-color: rgb(15, 36, 56) !important;
 }
-.fixed-top {
-    z-index: 900;
-}
+
 .flex-center {
     display: -webkit-box;
     display: -webkit-flex;
@@ -44,6 +80,7 @@ body, h1, h2, h3, h4, h5, h6 {
     align-items: center;
     height: 100%;
 }
+
 .side-nav .logo-wrapper img {
     height: auto;
     padding: 5% 25px;
@@ -56,52 +93,90 @@ body, h1, h2, h3, h4, h5, h6 {
 
 #aside-menu a {
     display: block;
-    font-size: 1rem;
-    height: 56px;
-    line-height: 56px;
+    font-size: 1.5rem;
+    height: 40px;
+    line-height: 3rem;
     padding-left: 20px;
-    color: #2c2c2c;
+    color: #fff;
+    font-family: Vidaloka,serif;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
+
 .logo-wrapper {
     width: 100%;
     height: auto;
 }
+
 .side-nav .social {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 .side-nav .social li {
     padding-top: .6rem;
     padding-bottom: .6rem;
     margin: 0;
     display: inline-block;
 }
+
 .side-nav .social a {
     display: block;
     font-size: 1rem;
     height: 56px;
     line-height: 56px;
     color: #3179a3;
+    font-family: 'Vidaloka', serif;
 }
 
-.background-image {
-    background-image: url(../img/top-menu.jpg);
-    background-repeat: repeat-x;
+.bg-transparent {
+    background: transparent !important;
+}
+
+.fixed-top {
+    z-index: 900 !important;
+}
+
+.navbar {
+    box-shadow: none;
+    font-weight: 300;
+}
+
+#redes a {
+    color: #16344f;
+}
+
+#redes a:hover i {
+    color: rgba(22, 52, 79, 0.69);
+}
+
+.btn-outline-danger:hover {
+    border-color: #9f204e !important;
+    background-color: transparent !important;
+    color: #9f204e !important;
+}
+
+.color-primario {
+    color: #65243c;
 }
 
 .green-color {
     color: #7ebc42;
 }
+
 .orange-color {
     color: #f26522;
 }
+
 .blue-color {
-    color: #3179a3;
+    color: #16344f;
 }
-.aqua-color{
+
+.aqua-color {
     color: #015758;
 }
-.gold-color{
+
+.gold-color {
     color: #ffd15c;
 }
 
@@ -109,13 +184,16 @@ body, h1, h2, h3, h4, h5, h6 {
     padding: 5rem 0;
     margin-top: 0.4rem;
 }
+
 .bg-orange {
     background-color: rgba(242, 101, 34, 0.50);
 }
-.bg-blue{
+
+.bg-blue {
     background-color: rgba(49, 121, 163, 0.5);
 }
-.bg-green{
+
+.bg-green {
     background-color: rgba(126, 188, 66, 0.50);
 }
 
@@ -127,104 +205,228 @@ body, h1, h2, h3, h4, h5, h6 {
     display: block;
 }
 
+.btn-outline-danger {
+    border: none !important;
+    background-color: #712639 !important;
+    color: #fff !important;
+    box-shadow: none;
+}
 
 /* Estilos del Nosotros */
 
-.border-left{
-    border-left: 2px solid #3179a3!important;
+.border-left {
+    border-left: 2px solid #3179a3 !important;
 }
 
-.border-orange{
-    border-left:2px solid #f26522!important;
+.border-orange {
+    border-left: 2px solid #f26522 !important;
 }
-.border-purple{
-    border-left: 2px solid #92278f!important;
+
+.border-purple {
+    border-left: 2px solid #92278f !important;
 }
-.py-10{
+
+.py-10 {
     padding: 6rem 0;
 }
+
 .full {
     width: 100%;
     height: auto;
     padding: 2rem 0;
 }
 
-.timeline__item:after {
-    background-color: #3179a3!important;
-    border: 1px solid #3179a3!important;
-}
-.timeline:not(.timeline--horizontal):before {
-    background-color: #3179a3!important;
-    width: 2px!important;
+#prefooter {
+    background-color: #0c7082;
 }
 
-#timeline2 .timeline__item:after {
-    background-color: #7ebc42!important;
-    border: 1px solid #7ebc42!important;
-}
-
-#timeline2.timeline:not(.timeline--horizontal):before {
-    background-color: #7ebc42!important;
-    width: 2px!important;
-}
-
-
-
-#filosofia {
-    background-color: #f8f8f8;
-}
-
-.list-group-item {
-    background-color: transparent;
-    border: none;
-}
-
-.timeline__content h2 {
-    font-family: wca-bold;
-    font-size: 1.25rem;
-
-}
-.timeline__content p {
-    font-family: wca-light;
-}
-
-#adquisiciones {
-    background-color: #f8f8f8;
-}
-
-#premios {
-    background-color: #f8f8f8;
-}
-
-#prefooter{
-     background-color: #0c7082;
-}
-footer{
+footer {
     width: 100%;
     height: auto;
     background-color: #1db4cf;
 }
 
-.bg-image {
-    background-image: url(../img/rec2.jpg);
+.relative {
+    position: relative;
+}
+
+.altura-100vh {
+    height: 100vh;
+}
+
+#home-page {
+    background-image: url(../img/home_01_platillo.jpg);
+    background-size: contain;
+    background-position: bottom right;
     background-repeat: no-repeat;
-    background-position: center;
+}
+
+.amaranta-txt {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 2;
+    font-family: 'Lato' !important;
+}
+
+.top {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.bottom {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+.cocina {
+    color: #233f59;
+    margin-bottom: 10px;
+}
+
+#menu-page1 {
+    background: url(../img/Menus_Chicharos.jpg) bottom left no-repeat,
+        url(../img/Menus_Plato-Blanco.jpg) bottom right no-repeat;
+    background-size: 50%;
+}
+
+.box-carta {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.img-carta {
+    position: absolute;
+    left: 40%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg-blue {
+    height: 100vh;
+    background-color: #16344f;
+    color: white;
+    text-align: center;
+}
+
+.menu-title {
+    font-size: 1.25rem;
+}
+
+.menu-font {
+    font-size: 1rem;
+}
+
+#menu-carta-page,
+#menu-degustacion-page {
+    background-image: url(../img/Menus_Fondo_Ilustracion.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
 }
-.bg-white-50{
-    background-color: rgba(255, 255, 255, 0.35);
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 3px solid rgb(21, 51, 79);
 }
 
-header{
+/*Estilos del mapa*/
+#map {
     width: 100%;
-    min-height: 300px;
-    max-height: 600px;
+    height: 250px;
 }
 
-.derechos {
-    font-size: 0.75rem;
+.marker {
+    display: block;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 0;
 }
 
- .altura-min {
-     min-height: 300px;
- }
+
+.mapboxgl-popup {
+    max-width: 150px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+
+}
+
+@media only screen and (min-width:768px) {
+    .mapboxgl-popup {
+        max-width: 250px;
+    }
+}
+
+.mapboxgl-popup img {
+    max-width: 100%;
+    display: block;
+
+}
+
+.mapboxgl-popup-close-button {
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    background-color: #212121d6;
+    color: white;
+    font-weight: 700;
+}
+
+.mapboxgl-popup-content {
+    padding: 0;
+    background: #fff;
+}
+
+.mapboxgl-popup-content .title-map {
+    text-align: center;
+    font-weight: 700;
+    padding-top: 0.3rem;
+    font-size: 1rem;
+}
+
+.mapboxgl-popup-content .description-map {
+    padding: 0.2rem 0.4rem;
+}
+
+.mapboxgl-popup-content .btn-map {
+    display: block;
+    width: 50%;
+    padding: 0.2rem;
+    background-color: black;
+    color: white;
+    margin: 0 auto 0.5rem;
+    text-align: center;
+}
+
+#marker {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background-size: 80px;
+    background-repeat: no-repeat;
+}
+
+#marker {
+    background-image: url(../img/Logo_Amaranta.png);
+}
+
+/* Estilos del widget */
+
+
+.ot-dtp-picker.wide {
+    width: 100% !important;
+}
+.ot-dtp-picker {
+    padding: 0!important;
+}
+.direccion {
+    font-size: 1.5rem;
+}

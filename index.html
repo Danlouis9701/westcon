@@ -7,766 +7,429 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.png" type="image/png">
-    <title>Westcon Comstor Americas</title>
-    <link rel="stylesheet" href="wca-font/wca-font.css">
+    <title>Amaranta</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Pushbar CSS -->
+    <link rel="stylesheet" href="css/mdb.min.css">
     <link rel="stylesheet" href="pushbar/pushbar.css">
+    <!-- fullPage   -->
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/responsive.min.css">
-    <!-- REVOLUTION STYLE SHEETS -->
-    <link rel="stylesheet" type="text/css" href="westcon-news/css/settings.css">
-    <!-- REVOLUTION LAYERS STYLES -->
-    <style>
-        .tp-caption.Newspaper-Button,
-        .Newspaper-Button {
-            color: rgba(255, 255, 255, 1.00);
-            font-size: 13px;
-            line-height: 17px;
-            font-weight: 400;
-            font-style: normal;
-            font-family: 'wca-regular';
-            text-decoration: none;
-            background-color: rgba(255, 255, 255, 0);
-            border-color: rgba(255, 255, 255, 0.25);
-            border-style: solid;
-            border-width: 1px;
-            border-radius: 0px 0px 0px 0px;
-            letter-spacing: 2px
-        }
-
-        .tp-caption.Newspaper-Button:hover,
-        .Newspaper-Button:hover {
-            color: rgba(0, 0, 0, 1.00);
-            text-decoration: none;
-            background-color: rgba(255, 255, 255, 1.00);
-            border-color: rgba(255, 255, 255, 1.00);
-            border-style: solid;
-            border-width: 1px;
-            border-radius: 0px 0px 0px 0px;
-            cursor: pointer
-        }
-
-        .tp-caption.Newspaper-Subtitle,
-        .Newspaper-Subtitle {
-            color: rgba(168, 216, 238, 1.00);
-            font-size: 15px;
-            line-height: 20px;
-            font-weight: 400;
-            font-style: normal;
-            font-family: 'wca-regular';
-            text-decoration: none;
-            background-color: transparent;
-            border-color: transparent;
-            border-style: none;
-            border-width: 0px;
-            border-radius: 0 0 0 0px
-        }
-
-        .tp-caption.Newspaper-Title,
-        .Newspaper-Title {
-            color: rgba(255, 255, 255, 1.00);
-            font-size: 50px;
-            line-height: 55px;
-            font-weight: 400;
-            font-style: normal;
-            font-family: "wca-light";
-            text-decoration: none;
-            background-color: transparent;
-            border-color: transparent;
-            border-style: none;
-            border-width: 0px;
-            border-radius: 0 0 0 0px
-        }
-    </style>
-    <style type="text/css">
-        .erinyen .tp-tab-title {
-            color: rgb(168, 216, 238);
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-family: "wca-light";
-            margin-bottom: 5px;
-            line-height: 15px
-        }
-
-        .erinyen .tp-tab-desc {
-            font-size: 18px;
-            font-weight: 100;
-            color: rgb(255, 255, 255);
-            line-height: 25px;
-            font-family: "wca-light"
-        }
-    </style>
-
-    <style>
-        /*** Preloader ***/
-
-        body {
-            overflow: hidden;
-        }
-
-        #preloader {
-            position: fixed;
-            height: 100vh;
-            width: 100vw;
-            background-color: #fff;
-            z-index: 10000;
-        }
-
-        #loader {
-            width: 300px;
-            height: 250px;
-            padding-top: 8rem;
-            position: relative;
-            left: 50%;
-            top: 30%;
-            margin: -100px 0 0 -150px;
-        }
-
-        @media only screen and (min-width:992px) {
-            #loader {
-                width: 400px;
-                height: 350px;
-                padding-top: 8rem;
-                position: relative;
-                left: 50%;
-                top: 30%;
-                margin: -150px 0 0 -200px;
-            }
-        }
-    </style>
-
-
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
-
-    <!-------------------
-       Precargador
-    ------------------->
-    <div id="preloader">
-        <div id="loader">
-            <iframe src="preload/westcon.html" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
-    </div>
-
 
     <aside data-pushbar-id="left" class="pushbar from_left aside side-nav">
         <ul class="" id="custom-aside">
             <li>
                 <button data-pushbar-close type="button" class="close p-2 m-2" aria-label="Close">
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-times text-white"></i>
                 </button>
             </li>
             <li>
                 <div class="logo-wrapper waves-light waves-effect waves-light">
-                    <a href="#"><img src="img/svg/westcon-logo.svg" class="img-fluid flex-center"></a>
+                    <a href="#"><img src="img/amaranta-hoja.png" class="img-fluid flex-center"></a>
                 </div>
             </li>
+            <!--
             <li>
                 <ul class="social d-flex justify-content-around">
                     <li><a href="#" class="icons-sm fb-ic"><i class="fab fa-facebook-f fa-lg"> </i></a></li>
                     <li><a href="#" class="icons-sm tw-ic"><i class="fab fa-twitter fa-lg"> </i></a></li>
-                    <li><a href="https://www.synnexcorp.com/esolutions" class="icons-sm gplus-ic" target="_blank"><i class="fas fa-shopping-cart fa-lg green-color"></i></a></li>
+                    <li><a href="https://www.synnexcorp.com/esolutions" target="_blank" class="icons-sm gplus-ic"><i class="fas fa-shopping-cart fa-lg green-color"></i></a></li>
                 </ul>
-
             </li>
+-->
             <li>
                 <ul class="collapsible collapsible-accordion" id="aside-menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li class="">
-                        <a class="waves-effect arrow-r" data-toggle="collapse" href="#collapseExample">Portafolio<i class="fas fa-angle-down rotate-icon ml-2"></i></a>
+                    <li data-menuanchor="home">
+                        <a href="#home" class="waves-effect btn-open">HOME</a>
+                    </li>
+                    <li data-menuanchor="ingredientes">
+                        <a href="#ingredientes" class="waves-effect btn-open">Ingredientes</a>
+                    </li>
+                    <li data-menuanchor="menu">
+                        <a href="#menu" class="waves-effect btn-open">Menú</a>
+                    </li>
+                    <li data-menuanchor="cartas">
+                        <a href="#cartas" class="waves-effect btn-open">Cartas</a>
+                    </li>
+                    <!--
+                    <li>
+                        <a class="waves-effect arrow-r" data-toggle="collapse" href="#collapseExample">Menú<i class="fas fa-angle-down rotate-icon ml-2"></i></a>
                         <div class="collapse menuAside" id="collapseExample">
                             <ul class="list-unstyled">
-                                <li><a href="soluciones.html" class="waves-effect">Soluciones</a>
+                                <li>
+                                <a href="menu-degustacion.html" class="waves-effect">Menú Degustacíon</a>
                                 </li>
-                                <li><a href="marcas.html" class="waves-effect">Marcas e información</a>
+                                <li>
+                                <a href="menu-carta.html" class="waves-effect">Menú Carta</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="servicios.html" class="waves-effect">Servicios</a></li>
-                    <li><a href="carreras-profesionales.html" class="waves-effect">Carreras Profesionales</a></li>
-                    <li><a href="programas-de-educacion.html" class="waves-effect">Programas de Educación</a></li>
+-->
+                    <li data-menuanchor="contacto">
+                        <a href="#contacto" class="waves-effect">Contacto</a>
+                    </li>
                 </ul>
             </li>
         </ul>
     </aside>
 
     <!-- Navbar Mobile -->
-    <nav class="navbar fixed-top navbar-light white d-lg-none pt-4 background-image">
-
-        <a class="navbar-brand" href="index.html"><img src="img/svg/westcon-logo.svg" width="180" alt=""></a>
+    <nav class="navbar fixed-top navbar-light white bg-transparent">
+        <!--        <a class="navbar-brand" href="index.html"><img src="img/svg/westcon-logo.svg" width="180" alt=""></a>-->
+        <a href="#contacto" class="btn btn-outline-danger color-primario waves-effect ml-auto mr-4">Reserva</a>
 
         <!-- Collapse button -->
         <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-pushbar-target="left" aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars fa-lg"></i>
+            <img src="img/hamburguesa-invert.png" alt="">
         </button>
     </nav>
     <!--/.Navbar-->
 
-    <!--Navbar DESKTOP -->
-    <nav class="navbar navbar-expand-lg d-none d-lg-flex fixed-top navbar-light white pt-4 background-image">
-        <a class="navbar-brand" href="index.html"><img src="img/svg/westcon-logo.svg" width="180" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html">Nosotros</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portafolio
-                    </a>
-                    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href="soluciones.html">Soluciones</a>
-                        <a class="dropdown-item" href="marcas.html">Marcas e información</a>
+    <div id="fullpage">
+        <div id="element1" class="top">
+            <h5 class="cocina mb-0">Cocina</h5>
+            <h5 class="cocina mb-0">Mexiquense</h5>
+            <h5 class="cocina mb-0">Contemporánea</h5>
+        </div>
+        <div id="redes" class="bottom">
+            <a href="https://www.instagram.com/restamaranta/?hl=es-la" target="_blank"><i class="fab fa-instagram fa-lg d-block  mx-auto mb-3"></i></a>
+            <a href="https://www.facebook.com/AmarantaRestaurante/" target="_blank"><i class="fab fa-facebook-f fa-lg d-block ml-1"></i></a>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 py-5 separador"></div>
+            </div>
+        </div>
+
+        <header id="home-page" class="vertical-scrolling" data-tooltip="Home">
+            <div class="container-fluid px-0 relative">
+                <div class="row justify-content-center align-items-center altura-100vh mx-0">
+                    <!--
+                    <div class="col-10 mx-0 px-0">
+                        <img src="img/home_01_platillo.jpg" class="img-fluid float-right" alt="">
                     </div>
-                </li>
+                    -->
 
-                <li class="nav-item">
-                    <a class="nav-link" href="servicios.html">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="carreras-profesionales.html">Carreras Profesionales</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="programas-de-educacion-html">Programas de Educación</a>
-                </li>
+                    <div class="col-9 col-md-4 col-lg-4 p-4">
+                        <img src="img/Logo_Amaranta.png" class="img-fluid d-block mx-auto mb-4 px-5 wow fadeInLeft" data-wow-duration="1s" alt="">
+                        <h4 class="color-primario text-right wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Junto con mi familia formamos Amaranta, el lugar que nos permite encontrar los sabores de nuestra propia tierra para experimentar con ellos y explotar cada uno de sus componentes.
+                        </h4>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+        </header>
+        <div id="startingredientes"></div>
+        <section id="ingredientes-page" class="vertical-scrolling relative" data-tooltip="Ingredientes">
 
-            </ul>
-            <ul class="navbar-nav ml-auto nav-flex-icons">
-                <li class="nav-item">
-                    <a href="https://www.synnexcorp.com/esolutions" target="_blank" class="nav-link waves-effect waves-light">
-                        <i class="fas fa-shopping-cart fa-2x green-color"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!--/.Navbar -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 py-5 separador"></div>
-        </div>
+            <div class="container-fluid">
+                <div class="row altura-100vh justify-content-around align-items-center">
+                    <div class="col-12 d-block d-md-none"></div>
+                    <div class="col-4 col-md-5 col-lg-4 col-xl-5 d-none d-md-block img-ingredientes">
+                        <img src="img/Ingredientes_Plato.jpg" class="img-fluid d-block mx-auto" alt="">
+                    </div>
+                    <div class="col-12 col-md-4 pt-4 mt-5">
+                        <h2 class="display-3 font-uppercase font-secundaria blue-color" id="ingredientesTitle">INGREDIENTES<br>ORGÁNICOS</h2>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="img/Ingredientes_Huerto.jpg" alt="" class="img-fluid mb-4" id="img-huerto">
+                        <div class="row">
+                            <div class="col-9">
+                                <h5 class="color-primario" id="txt-huerto">Sabemos que la excelencia de un buen plato de comida proviene de los ingredientes que se usan para su elaboración, es por eso que nos esforzamos en cultivar nuestros propios vegetales, frutos y flores, para así brindarte un experiencia honesta y deliciosa.</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-block d-md-none"></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="starmenu"></div>
+        <section id="menu-page" class="vertical-scrolling" data-tooltip="Menú">
+            <div class="container">
+                <div class="row altura-100vh align-items-center">
+                    <div class="col-12 d-block d-md-none"></div>
+                    <div class="col-10 col-md-5 col-lg-3 col-xl-3 align-self-end offset-md-2 offset-lg-3">
+                        <img src="img/Menu_Pablo_BW.jpg" class="img-fluid" alt="Pablo Salas" id="menu-pablo">
+                    </div>
+                    <div class="col-10 col-md-3 align-self-center offset-md-1 offset-lg-2">
+                        <h2 class="display-3 font-secundaria blue-color" id="menu-title">MENÚ</h2>
+                        <h5 class="color-primario" id="menu-txt">Como resultado de nuestra continua búsqueda dentro del panorama culinario del Estado de México, nuestro menú de degustación se transforma cada dos meses. Descubre.</h5>
+                    </div>
+                    <div class="col-12 d-block d-md-none"></div>
+                </div>
+            </div>
+        </section>
+        <div id="startcartas"></div>
+        <section id="cartas-page" class="vertical-scrolling" data-tooltip="Cartas">
+            <!--  Deslizamiento horizontal          -->
+            <div class="horizontal-scrolling relative" id="menu-page1">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-8 col-md-5 col-lg-4 img-carta">
+                            <img src="img/Menus_Plato_Azul.jpg" class="img-fluid d-block mx-auto" alt="" id="plato-azul">
+                        </div>
+                        <!--<a href="#cartas/1" class="bg-white p-3 m-1 m-md-3">-->
+
+                            <div class="col-10 col-md-6 col-lg-6 p-4 bg-white slide-desayunos" id="menu-degustacion">
+                                <h2 class="display-3 blue-color font-secundaria">CONOCE NUESTROS MENÚS</h2>
+                                <hr>
+                                <a href="img/menus/Menu-Desayunos.pdf" target="_blank" class=" p-3 m-1 m-md-3">
+                                    <h4 class="display-4 align-self-center blue-color font-secundaria slide-desayunos">DESAYUNOS</h4>
+                                </a>
+                                <a href="img/menus/Menu-a-la-Carta.pdf" target="_blank" class=" p-3 m-1 m-md-3">
+                                    <h4 class="display-4 align-self-center blue-color font-secundaria slide-degustacion">COMIDAS</h4>
+                                </a>
+                                <a href="img/menus/Menu-Degustacion.pdf" target="_blank" class=" p-3 m-1 m-md-3">
+                                    <h4 class="display-4 align-self-center blue-color font-secundaria slide-carta">DEGUSTACIÓN</h4>
+                                </a>
+                            </div>
+
+                        <!--<a href="#cartas/2" class="bg-white p-3 m-1 m-md-3">-->
+<!--
+                        <a href="img/menus/Menu-Degustacion.pdf" class="bg-white p-3 m-1 m-md-3">
+                            <div class="col-3 col-md-5 col-lg-3  box-carta d-flex slide-degustacion" id="menu-carta">
+                                <h4 class="display-4 align-self-center blue-color slide-degustacion">MENÚ DEGUSTACIÓN</h4>
+                            </div>
+                        </a>
+-->
+                        <!--<a href="#cartas/3" class="bg-white p-3 m-1 m-md-3">-->
+<!--
+                        <a href="img/menus/Menu-a-la-Carta.pdf" target="_blank" class="bg-white p-3 m-1 m-md-3">
+                            <div class="col-3 col-md-5 col-lg-3  box-carta d-flex slide-carta" id="menu-carta">
+                                <h4 class="display-4 align-self-center blue-color slide-carta">MENÚ A LA CARTA</h4>
+                            </div>
+                        </a>
+-->
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            <div class="horizontal-scrolling" id="menu-desayunos-page">
+                <div class="container-fluid">
+                    <div class="row altura-100vh  justify-content-center align-items-center">
+                        <div class="col-2 col-lg-1">
+                            <img src="img/menu.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-8 col-lg-8 bg-blue pt-3 px-5">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <h3 class="menu-title font-secundaria">TORTILLA DE HUEVO A LA MEXIQUENSE,</h3>
+                                    <h5 class="menu-font font-secundaria mb-4"> rellena de huauzontles y cebolla fileteada, gratinada y bañada en caldillo de jitomate.</h5>
+
+                                    <h3 class="menu-title font-secundaria">CARPACCIO DE MANITAS DE CERDO</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Rebanadas muy finas de manitas de cerdo sin hueso, con vinagre, aceite de oliva y orégano, ensalada de col morada,
+                                        chayote, zanahorias, chile jalapeño/ $190.00</h5>
+
+                                    <h3 class="menu-title font-secundaria">CROQUETAS DE HUAZONTLE</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Caldillo espeso de jitomate, queso prensado/ $185.00</h5>
+
+                                    <h3 class="menu-title font-secundaria">SOPA DE MÉDULA</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Caldillo de jitomate, epazote, chipotle/ $145.00</h5>
+
+                                    <h3 class="menu-title font-secundaria">FIDEO SECO</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Con aguacate, queso prensado y salsa de chipotle/ $130.00</h5>
+
+                                    <h3 class="menu-title font-secundaria">ENSALADA DE BETABEL ROSTIZADO</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Tocino de papada de cerdo hecho en casa, nueces garapiñadas, queso de cabra/ $160.00</h5>
+
+                                    <h3 class="menu-title font-secundaria">TORTILLA DE HUEVO A LA MEXIQUENSE,</h3>
+                                    <h5 class="menu-font font-secundaria mb-4"> rellena de huauzontles y cebolla fileteada, gratinada y bañada en caldillo de jitomate.</h5>
+
+                                    <h3 class="menu-title font-secundaria">CARPACCIO DE MANITAS DE CERDO</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Rebanadas muy finas de manitas de cerdo sin hueso, con vinagre, aceite de oliva y orégano, ensalada de col morada,
+                                        chayote, zanahorias, chile jalapeño/ $190.00</h5>
+
+                                    <h3 class="menu-title font-secundaria">CROQUETAS DE HUAZONTLE</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Caldillo espeso de jitomate, queso prensado/ $185.00</h5>
+
+                                    <h3 class="menu-title font-secundaria">SOPA DE MÉDULA</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Caldillo de jitomate, epazote, chipotle/ $145.00</h5>
+
+                                    <h3 class="menu-title font-secundaria">FIDEO SECO</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Con aguacate, queso prensado y salsa de chipotle/ $130.00</h5>
+
+                                    <h3 class="menu-title font-secundaria">ENSALADA DE BETABEL ROSTIZADO</h3>
+                                    <h5 class="menu-font font-secundaria mb-4">Tocino de papada de cerdo hecho en casa, nueces garapiñadas, queso de cabra/ $160.00</h5>
+                                </div>
+                                <div class="col-12 col-lg-6"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-2 col-lg-1">
+                            <img src="img/DESAYUNOS.png" class="img-fluid ml-3" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+
+            <!--
+            <div class="horizontal-scrolling" id="menu-degustacion-page">
+                <div class="container-fluid">
+                    <div class="row altura-100vh  justify-content-center align-items-center">
+                        <div class="col-2 col-lg-1">
+                            <img src="img/menu.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-8 col-lg-6 bg-blue p-5">
+                            <h3 class="menu-title font-secundaria">TARTAR DE TRUCHA </h3>
+                            <h5 class="menu-font font-secundaria mb-4">Alcaparra, jengibre, cebollin, mayonesa de manzano, maíz tostado, hueva de trucha/ $195.00</h5>
+
+                            <h3 class="menu-title font-secundaria">TAMAL VERDE DE QUELITES</h3>
+                            <h5 class="menu-font font-secundaria mb-4">Salsa de poblano, queso fresco, ensalada de quelites/$160.00</h5>
+
+                            <h3 class="menu-title font-secundaria">SOPA DE FRIJOL</h3>
+                            <h5 class="menu-font font-secundaria mb-4">Flor de calabaza, chile jalapeño/ $145.00</h5>
+
+                            <h3 class="menu-title font-secundaria">LECHÓN CON VERDOLAGAS </h3>
+                            <h5 class="menu-font font-secundaria mb-4">En salsa verde/ $360.00</h5>
+
+                            <h3 class="menu-title font-secundaria">BETABEL, YOGURTH, CENIZA GAZNATE RELLENO CON MERENGUE DE MEZCAL</h3>
+                            <h5 class="menu-font font-secundaria mb-4">Sorbete de naranja con aceite de oliva/ $140.00</h5>
+
+                            <h3 class="menu-title font-secundaria">CON MARIDAJE SUGERIDO / $890 / $1340.00</h3>
+                        </div>
+                        <div class="col-2 col-lg-1">
+                            <img src="img/degustacion.png" class="img-fluid ml-3" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+
+            <!--
+            <div class="horizontal-scrolling" id="menu-carta-page">
+                <div class="container-fluid">
+                    <div class="row altura-100vh  justify-content-center align-items-center">
+                        <div class="col-2 col-lg-1">
+                            <img src="img/menu.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-8 col-lg-6 bg-blue pt-3 px-5">
+                            <h3 class="menu-title font-secundaria">OBISPO TENANCINGO HECHO EN CASA</h3>
+                            <h5 class="menu-font font-secundaria mb-4"> Embutido de carne molida de cerdo sazonada con epazote,
+                                cebolla, guajillo y almendras tostadas; verduras encurtidas, manzana fresca, mostaza/ $195.00</h5>
+
+                            <h3 class="menu-title font-secundaria">CARPACCIO DE MANITAS DE CERDO</h3>
+                            <h5 class="menu-font font-secundaria mb-4">Rebanadas muy finas de manitas de cerdo sin hueso, con vinagre, aceite de oliva y orégano, ensalada de col morada,
+                                chayote, zanahorias, chile jalapeño/ $190.00</h5>
+
+                            <h3 class="menu-title font-secundaria">CROQUETAS DE HUAZONTLE</h3>
+                            <h5 class="menu-font font-secundaria mb-4">Caldillo espeso de jitomate, queso prensado/ $185.00</h5>
+
+                            <h3 class="menu-title font-secundaria">SOPA DE MÉDULA</h3>
+                            <h5 class="menu-font font-secundaria mb-4">Caldillo de jitomate, epazote, chipotle/ $145.00</h5>
+
+                            <h3 class="menu-title font-secundaria">FIDEO SECO</h3>
+                            <h5 class="menu-font font-secundaria mb-4">Con aguacate, queso prensado y salsa de chipotle/ $130.00</h5>
+
+                            <h3 class="menu-title font-secundaria">ENSALADA DE BETABEL ROSTIZADO</h3>
+                            <h5 class="menu-font font-secundaria mb-4">Tocino de papada de cerdo hecho en casa, nueces garapiñadas, queso de cabra/ $160.00</h5>
+
+                        </div>
+                        <div class="col-2 col-lg-1">
+                            <img src="img/a-la-carta.png" class="img-fluid ml-3" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+-->
+
+        </section>
+
+        <section id="contacto-page" class="vertical-scrolling" data-tooltip="Contacto">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+
+                    <div class="col-12 col-md-5 mt-2 mb-2">
+                        <div id='map'></div>
+                    </div>
+
+                    <div class="col-5 col-md-5 order-2 order-md-1">
+                        <h2 class="font-secundaria direccion blue-color mb-5">Calle Francisco Murguía Ote. 402, Universidad, 50130 Toluca de Lerdo, Méx. Esquina con Calle Mariano Matamoros.</h2>
+                        <h3 class="font-secundaria direccion color-primario mt-3 mb-3">Toluca <br>280-8265 </h3>
+                        <h3 class="font-secundaria direccion color-primario">Otros estados <br>01(722)280-8265</h3>
+                    </div>
+
+                    <div class="col-7 col-lg-10 mt-0 order-1 order-md-2">
+                        <div class="widget-full d-none d-lg-block">
+                            <script type="text/javascript" src='//www.opentable.com.mx/widget/reservation/loader?rid=1008691&domain=commx&type=standard&theme=wide&lang=es-MX&overlay=false&iframe=false'></script>
+                        </div>
+
+                        <div class="widget-small d-block d-lg-none">
+                            <script type='text/javascript' src='//www.opentable.com.mx/widget/reservation/loader?rid=1008691&domain=commx&type=standard&theme=standard&lang=es-MX&overlay=false&iframe=false'>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
-    <!-- START REVOLUTION SLIDER    -->
-    <div id="rev_slider_38_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="westcon-news" data-source="gallery" style="margin:0px auto;background:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
-        <!-- START REVOLUTION SLIDER 5.4.8.1 fullwidth mode -->
-        <div id="rev_slider_38_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.8.1">
-            <ul>
-                <!-- SLIDE  -->
-                <li data-index="rs-158" data-transition="crossfade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/100x50_a60b8-westcon2.jpg" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Bienvenido a" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="Westcon-Comstor México, una división de SYNNEX Corporation">
-                    <!-- MAIN IMAGE -->
-                    <img src="westcon-news/assets/a60b8-westcon2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" id="slide-158-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0,0,0,0.35);"> </div>
-
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption Newspaper-Title   tp-resizeme" id="slide-158-layer-1" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['165','135','105','130']" data-fontsize="['50','50','50','30']" data-lineheight="['55','55','55','35']" data-width="['600','600','600','420']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; letter-spacing: ;">Westcon-Comstor México,
-                        una división de SYNNEX Corporation </div>
-
-                    <!-- LAYER NR. 3 -->
-                    <div class="tp-caption Newspaper-Subtitle   tp-resizeme" id="slide-158-layer-2" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['140','110','80','100']" data-fontsize="['25','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 25px; letter-spacing: ;">Bienvenido a </div>
-
-                    <!-- LAYER NR. 4 -->
-                    <a href="nosotros.html" target="_blank"><div class="tp-caption Newspaper-Button rev-btn " id="slide-158-layer-5" data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" data-y="['top','top','top','top']" data-voffset="['361','331','301','245']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bc:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; letter-spacing: ;border-color:rgba(255,255,255,0.25);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Leer más</div></a>
-                </li>
-                <!-- SLIDE  -->
-                <li data-index="rs-159" data-transition="crossfade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/100x50_a60b8-westcon3.jpg" data-rotate="0" data-saveperformance="off" data-title="Servicios" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="Ampliando sus capacidades, capacidad y cobertura">
-                    <!-- MAIN IMAGE -->
-                    <img src="westcon-news/assets/a60b8-westcon3.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-
-                    <!-- LAYER NR. 5 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" id="slide-159-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0,0,0,0.35);"> </div>
-
-                    <!-- LAYER NR. 6 -->
-                    <div class="tp-caption Newspaper-Title   tp-resizeme" id="slide-159-layer-1" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['165','135','105','130']" data-fontsize="['50','50','50','30']" data-lineheight="['55','55','55','35']" data-width="['678','600','600','420']" data-height="['176','none','none','none']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 678px; max-width: 678px; max-width: 176px; max-width: 176px; white-space: normal; letter-spacing: ;">Ampliando sus capacidades, capacidad y cobertura </div>
-
-                    <!-- LAYER NR. 7 -->
-                    <div class="tp-caption Newspaper-Subtitle   tp-resizeme" id="slide-159-layer-2" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['140','110','80','100']" data-fontsize="['25','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 25px; letter-spacing: ;">SERVICIOS </div>
-
-                    <!-- LAYER NR. 8 -->
-                    <div class="tp-caption Newspaper-Button rev-btn " id="slide-159-layer-5" data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" data-y="['top','top','top','top']" data-voffset="['361','331','301','245']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bc:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; letter-spacing: ;border-color:rgba(255,255,255,0.25);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Leer más </div>
-                </li>
-                <!-- SLIDE  -->
-                <li data-index="rs-160" data-transition="crossfade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/100x50_a60b7-westcon1.jpg" data-rotate="0" data-saveperformance="off" data-title="Westcon-Comstor Cloud" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="Transformando su negocio en la nube">
-                    <!-- MAIN IMAGE -->
-                    <img src="westcon-news/assets/a60b7-westcon1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-
-                    <!-- LAYER NR. 9 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" id="slide-160-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0,0,0,0.35);"> </div>
-
-                    <!-- LAYER NR. 10 -->
-                    <div class="tp-caption Newspaper-Title   tp-resizeme" id="slide-160-layer-1" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['165','135','105','130']" data-fontsize="['50','50','50','30']" data-lineheight="['55','55','55','35']" data-width="['600','600','600','420']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; letter-spacing: ;">
-                        Transformando su negocio en la nube </div>
-
-                    <!-- LAYER NR. 11 -->
-                    <div class="tp-caption Newspaper-Subtitle   tp-resizeme" id="slide-160-layer-2" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['140','110','80','100']" data-fontsize="['25','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 25px; letter-spacing: ;">Westcon-Comstor Cloud </div>
-
-                    <!-- LAYER NR. 12 -->
-                    <div class="tp-caption Newspaper-Button rev-btn " id="slide-160-layer-5" data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" data-y="['top','top','top','top']" data-voffset="['361','331','301','245']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bc:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; letter-spacing: ;border-color:rgba(255,255,255,0.25);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Leer más </div>
-                </li>
-                <!-- SLIDE  -->
-                <li data-index="rs-161" data-transition="crossfade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/100x50_0b57a-westcon4.jpg" data-rotate="0" data-saveperformance="off" data-title="  Soluciones de implementación global" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="Ampliando su alcance global">
-                    <!-- MAIN IMAGE -->
-                    <img src="westcon-news/assets/0b57a-westcon4.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-
-                    <!-- LAYER NR. 13 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" id="slide-161-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0,0,0,0.35);"> </div>
-
-                    <!-- LAYER NR. 14 -->
-                    <div class="tp-caption Newspaper-Title   tp-resizeme" id="slide-161-layer-1" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['165','135','105','130']" data-fontsize="['50','50','50','30']" data-lineheight="['55','55','55','35']" data-width="['600','600','600','420']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; letter-spacing: ;">Ampliando su alcance global </div>
-
-                    <!-- LAYER NR. 15 -->
-                    <div class="tp-caption Newspaper-Subtitle   tp-resizeme" id="slide-161-layer-2" data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']" data-voffset="['140','110','80','100']" data-fontsize="['25','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 25px; letter-spacing: ;">Soluciones de implementación global </div>
-
-                    <!-- LAYER NR. 16 -->
-                    <div class="tp-caption Newspaper-Button rev-btn " id="slide-161-layer-5" data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" data-y="['top','top','top','top']" data-voffset="['361','331','301','245']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bc:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; letter-spacing: ;border-color:rgba(255,255,255,0.25);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Leer más </div>
-                </li>
-            </ul>
-            <div class="tp-bannertimer" style="height: 5px; background: rgba(166,216,236,1);"></div>
-        </div>
-    </div><!-- END REVOLUTION SLIDER -->
-
-
-    <section id="soluciones" class="full mt-5 py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mb-5">
-                    <h2 class="titulo display-4 wow fadeIn slow">Synnex <span class="subtitulo blue-color ml-5">Corporation.</span></h2>
-                </div>
-            </div>
-            <div class="row px-3 justify-content-around">
-                <div class="col-12 col-md-6 card-body border-orange mb-5 mb-lg-0">
-                    <p class="text-black-50">Es una compañía mundial de distribución de tecnologías y de servicios de tercerización de procesos, proveemos servicios de empresa a empresa que ayudan a nuestros clientes y socios comerciales a crecer su negocio y desarrollar estrategias orientadas a obtener el compromiso de sus clientes. Con sede en Freemont California y con operaciones globales, SYNNEX opera en dos segmentos comerciales: Soluciones Tecnológicas y Concentrix, Cotiza en la bolsa de valores de Nueva York (NYSE: SNX) y ocupa el lugar 169 en la lista del Fortune 200 de 2018.</p>
-
-                </div>
-                <div class="col-12 col-md-6 col-lg-6">
-                    <div class="row justify-content-end">
-                        <div class="col-12 justify-content-end">
-                            <img src="img/home/synnex3.jpg" alt="Synnex Corporation" class="img-fluid d-block mx-1 my-1 z-depth-1 rounded float-right wow fadeIn slow">
-                            <img src="img/home/synnex1.jpg" alt="Synnex Corporation" class="img-fluid d-block mx-1 my-1 z-depth-1 rounded float-md-right wow fadeIn slow">
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <img src="img/home/synnex2.jpg" alt="Synnex Corporation" class="img-fluid d-block mx-1 my-1 z-depth-1 rounded float-right wow fadeIn slow">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="soluciones" class="full mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="titulo display-4">Soluciones <span class="subtitulo orange-color ml-0 ml-md-5"> tecnológicas </span></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-10 mb-3 wow fadeInUp">
-                    <div class="row">
-                        <div class="col-4 col-md-2 card-body text-center">
-                            <img src="img/visibilidad-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-8 card-body">
-                            <p class="card-text">
-                                SYNNEX ofrece las soluciones tecnológicas más relevantes para los mercados de TI y productos electrónicos de consumo para ayudar a nuestros socios a hacer crecer sus negocios de manera sostenible. Distribuimos más de 30,000 productos de tecnología de más de 400 fabricantes líderes y emergentes del mundo, y brindamos soluciones completas a más de 20,000 integradores de soluciones en los Estados Unidos, Canadá y Japón, y más de 10,000 integradores de soluciones en México.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-10 mb-3 wow fadeInUp">
-                    <div class="row">
-                        <div class="col-4 col-md-2 card-body text-center">
-                            <img src="img/visibilidad-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-8 card-body">
-                            <p class="card-text">
-                                Como parte de nuestros servicios de valor agregado, SYNNEX proporciona una variedad de servicios profesionales y de marketing, incluida la generación de demanda a usuario final, educación continua, soporte pre y post venta; habilitación de los canales, arquitectura de soluciones e integración; soporte del ciclo de vida del producto; logística y distribución. Además, SYNNEX ofrece una amplia gama de opciones financieras para garantizar que nuestros socios siempre tengan los medios para cerrar acuerdos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-10 mb-3 wow fadeInUp">
-                    <div class="row">
-                        <div class="col-4 col-md-2 card-body text-center">
-                            <img src="img/visibilidad-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-8 card-body">
-                            <p class="card-text">
-                                Con la adquisición de Westcon-Comstor Americas que opera en América del Norte y América Latina robustecimos nuestro portafolio de productos y servicios en las vertientes de: seguridad, colaboración, redes y centros de datos. Nuestro conocimiento técnico y nuestros programas están diseñados para mantener a nuestros socios a la vanguardia de sus mercados para impulsar el negocio y el crecimiento.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-10 mb-3 wow fadeInUp">
-                    <div class="row">
-                        <div class="col-4 col-md-2 card-body text-center">
-                            <img src="img/visibilidad-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-8 card-body">
-                            <p class="card-text">
-                                Nuestra división de Soluciones Hyve diseña, fabrica e implementa servidores de centros de datos y soluciones de almacenamiento rentables y eficientes en el consumo de energía en todo el mundo para algunos de los usuarios más grandes de centros de datos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="social" class="full mt-5 py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="titulo display-4">CONCENTRIX</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <!-- Card -->
-                    <div class="card mb-4">
-                        <!--Card content-->
-                        <div class="card-body z-depth-1-half p-5 wow fadeIn">
-                            <!--Title-->
-                            <!--                            <h4 class="card-title text-center">Responsabilidad con la comunidad</h4>-->
-                            <!--Text-->
-                            <img src="img/line-green.png" alt="" class="d-block mx-auto mb-5">
-                            <p class="h5 text-black-50">Con más de 225,000 asociados operando en más de 40 países y 70 idiomas. <span class="wca-bold">Concentrix</span> ofrece servicios y soluciones de tercerización de procesos de alto valor a mas de 650 clientes, contribuyendo activamente en marcar una diferencia y mejora de los resultados del negocio, maximizando los ecosistemas de los clientes, con tecnología innovadora, análisis avanzado y optimización de procesos. <span class="wca-bold">Concentrix</span> ofrece soluciones de servicios para negocios a nivel mundial orientado a verticales como: servicios de salud, productos farmacéuticos, servicios bancarios y financieros, seguros, electrónica de consumo y tecnología. Esos servicios incluyen ventas directas, soporte técnico, atención al cliente, administración de clientes potenciales, administración de renovaciones y procesamiento de back-office.</p>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <!--                            <button type="button" class="btn btn-light-blue btn-md">Read more</button>-->
-                            <img src="img/line-green.png" alt="" class="d-block mx-auto mt-5">
-                        </div>
-
-                    </div>
-                    <!-- Card -->
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="servicios" class="full mt-5 py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mb-5">
-                    <h2 class="titulo display-4 wow fadeIn slow">Nuestros <span class="subtitulo blue-color ml-5">Servicios</span></h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <div class="media">
-                        <img class="mr-3" src="img/serv1.jpg" alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h3 class="mt-0">Servicio</h3>
-                        </div>
-                    </div>
-                    <p class="mt-4">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="media">
-                        <img class="mr-3" src="img/serv2.jpg" alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h3 class="mt-0">Servicio</h3>
-                        </div>
-                    </div>
-                    <p class="mt-4">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="media">
-                        <img class="mr-3" src="img/serv3.png" alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h3 class="mt-0">Servicio</h3>
-                        </div>
-                    </div>
-                    <p class="mt-4">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="diferencias" class="full mt-5 py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 bg-image px-5 py-10">
-                    <div class="row justify-content-end bg-white-50">
-                        <div class="col-12 col-lg-5 py-lg-5">
-                            <h2 class="titulo display-4 wow fadeIn slow">What make us <span class="subtitulo green-color ml-3">Different</span></h2>
-                            <h3>Sed ut perspiciatis unde omnis iste natus:</h3>
-                            <ul>
-                                <li>Sit voluptatem accusantium doloremque</li>
-                                <li>Laudantium, totam rem aperiam</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, voluptatem.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dicta!</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div id="prefooter" class="container-fluid mx-0 mt-5 px-0 py-5">
-        <div class="row mx-0 justify-content-center">
-            <div class="col-12 col-lg-3 px-4 text-center">
-                <img src="img/svg/westcon-logo.svg" class="img-fluid">
-                <h6 class="white-text mt-5">SYNNEX Corporation </h6>
-                <h6 class="white-text">44201 Nobel Drive,</h6>
-                <h6 class="white-text">Fremont, CA 94538</h6>
-            </div>
-            <div class="col-12 col-lg-3 px-4 mt-5 mt-md-0">
-                <h3 class="white-text mb-3 mb-md-5">Contacto</h3>
-                <h6 class="white-text mb-3"><i class="fas fa-envelope mr-4"></i>info@synnex.com.mx</h6>
-                <h6 class="white-text"><i class="fas fa-phone mr-4"></i>(01 55) 2122 7800</h6>
-            </div>
-            <div class="col-12 col-lg-3 px-4 mt-5 mt-md-0">
-                <h3 class="white-text mb-3 mb-md-5">Legales</h3>
-                <h6 class="white-text mb-3">Políticas de ventas</h6>
-                <h6 class="white-text mb-3">Política de devoluciones</h6>
-                <h6 class="white-text mb-3">Politica de crédito</h6>
-                <h6 class="white-text mb-3"><a href="#" class="white-text">Aviso de Privacidad</a></h6>
-            </div>
-        </div>
-    </div>
-
-    <footer class="pt-3">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col text-center">
-                    <p class="white-text derechos">Synnex and the SYNNEX LOGO are registered trademarks of SYNNEX Corporation in the United States and other countries. All other trademarks are property of their respective owners. ©2014 SYNNEX Corporation. All rights reserved. SYNNEX is Member of the Global Technology Distribution Council</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
 
     <!-- /Start your project here-->
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scrolloverflow.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script src="js/mdb.min.js"></script>
-    <!-- REVOLUTION JS FILES -->
-    <script src="westcon-news/js/jquery.themepunch.tools.min.js"></script>
-    <script src="westcon-news/js/jquery.themepunch.revolution.min.js"></script>
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-    <script src="westcon-news/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="westcon-news/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="westcon-news/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="westcon-news/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="westcon-news/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="westcon-news/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="westcon-news/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="westcon-news/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="westcon-news/js/extensions/revolution.extension.video.min.js"></script>
-
-
-    <script>
-        function setREVStartSize(e) {
-            try {
-                e.c = jQuery(e.c);
-                var i = jQuery(window).width(),
-                    t = 9999,
-                    r = 0,
-                    n = 0,
-                    l = 0,
-                    f = 0,
-                    s = 0,
-                    h = 0;
-                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
-                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
-                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
-                    var u = (e.c.width(), jQuery(window).height());
-                    if (void 0 != e.fullScreenOffsetContainer) {
-                        var c = e.fullScreenOffsetContainer.split(",");
-                        if (c) jQuery.each(c, function(e, i) {
-                            u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
-                        }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
-                    }
-                    f = u
-                } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
-                e.c.closest(".rev_slider_wrapper").css({
-                    height: f
-                })
-            } catch (d) {
-                console.log("Failure at Presize of Slider:" + d)
-            }
-        };
-    </script>
-
-    <script type="text/javascript">
-        var revapi38,
-            tpj;
-        (function() {
-            if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
-            else onLoad();
-
-            function onLoad() {
-                if (tpj === undefined) {
-                    tpj = jQuery;
-                    if ("off" == "on") tpj.noConflict();
-                }
-                if (tpj("#rev_slider_38_1").revolution == undefined) {
-                    revslider_showDoubleJqueryError("#rev_slider_38_1");
-                } else {
-                    revapi38 = tpj("#rev_slider_38_1").show().revolution({
-                        sliderType: "standard",
-                        jsFileLocation: "//localhost:8888/revslider/revslider/public/assets/js/",
-                        sliderLayout: "fullwidth",
-                        dottedOverlay: "none",
-                        delay: 9000,
-                        navigation: {
-                            keyboardNavigation: "on",
-                            keyboard_direction: "horizontal",
-                            mouseScrollNavigation: "off",
-                            mouseScrollReverse: "default",
-                            onHoverStop: "off",
-                            touch: {
-                                touchenabled: "on",
-                                touchOnDesktop: "off",
-                                swipe_threshold: 75,
-                                swipe_min_touches: 1,
-                                swipe_direction: "horizontal",
-                                drag_block_vertical: false
-                            },
-                            arrows: {
-                                style: "gyges",
-                                enable: true,
-                                hide_onmobile: false,
-                                hide_over: 778,
-                                hide_onleave: false,
-                                tmp: '',
-                                left: {
-                                    h_align: "right",
-                                    v_align: "bottom",
-                                    h_offset: 40,
-                                    v_offset: 0
-                                },
-                                right: {
-                                    h_align: "right",
-                                    v_align: "bottom",
-                                    h_offset: 0,
-                                    v_offset: 0
-                                }
-                            },
-                            tabs: {
-                                style: "erinyen",
-                                enable: true,
-                                width: 250,
-                                height: 100,
-                                min_width: 250,
-                                wrapper_padding: 10,
-                                wrapper_color: "rgba(76,217,100,0.2)",
-                                tmp: '<div class="tp-tab-title">{{title}}</div><div class="tp-tab-desc">{{description}}</div>',
-                                visibleAmount: 3,
-                                hide_onmobile: true,
-                                hide_under: 778,
-                                hide_onleave: false,
-                                hide_delay: 200,
-                                direction: "vertical",
-                                span: true,
-                                position: "inner",
-                                space: 10,
-                                h_align: "right",
-                                v_align: "center",
-                                h_offset: 0,
-                                v_offset: 0
-                            }
-                        },
-                        viewPort: {
-                            enable: true,
-                            outof: "pause",
-                            visible_area: "80%",
-                            presize: false
-                        },
-                        responsiveLevels: [1240, 1024, 778, 480],
-                        visibilityLevels: [1240, 1024, 778, 480],
-                        gridwidth: [1240, 1024, 778, 480],
-                        gridheight: [600, 450, 400, 350],
-                        lazyType: "none",
-                        parallax: {
-                            type: "scroll",
-                            origo: "enterpoint",
-                            speed: 400,
-                            speedbg: 0,
-                            speedls: 0,
-                            levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 47, 48, 49, 50, 51, 55],
-                        },
-                        shadow: 0,
-                        spinner: "off",
-                        stopLoop: "off",
-                        stopAfterLoops: -1,
-                        stopAtSlide: -1,
-                        shuffle: "off",
-                        autoHeight: "off",
-                        hideThumbsOnMobile: "off",
-                        hideSliderAtLimit: 0,
-                        hideCaptionAtLimit: 0,
-                        hideAllCaptionAtLilmit: 0,
-                        debugMode: false,
-                        fallbacks: {
-                            simplifyAll: "off",
-                            nextSlideOnWindowFocus: "off",
-                            disableFocusListener: false,
-                        }
-                    });
-                }; /* END OF revapi call */
-            }; /* END OF ON LOAD FUNCTION */
-        }()); /* END OF WRAPPING FUNCTION */
-    </script>
-
-
-
-
-
     <script src="pushbar/pushbar.js"></script>
+
+    <!-- SCROLLMAGIC JS FILES   -->
+    <script type="text/javascript" src="scrollmagic/assets/js/lib/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script type="text/javascript" src="scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+
+    <!-- Fullpage js files -->
+
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/main.min.js"></script>
+
     <script src="js/custom.min.js"></script>
+    <script src="js/greenanimate.min.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
     <script>
-        $(window).on("load", function() {
-            setTimeout('delay()', 3500);
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZGFubG91aXM5NzAxIiwiYSI6ImNqbmdhcHB3dzAxODUzcG8wM3p2NWM3N20ifQ.ENQ3iUzrJeYJZl-dEZBjhg';
+        var amaranta = [-99.6563472, 19.2809575];
+        var map = new mapboxgl.Map({
+            center: [-99.6567692, 19.280916],
+            zoom: 14,
+            container: 'map',
+            style: 'mapbox://styles/danlouis9701/cjwbctvgs1u4l1cqkbktqxhqx'
         });
 
-        function delay() {
-            $('#preloader').fadeOut("slow");
-            $('body').css({
-                'overflow': 'visible'
-            });
-        }
+        // create the popup Puebla
+        var popup = new mapboxgl.Popup()
+            .setHTML("<h2 class='title-map'>Amaranta</h2><p class='description-map'>Francisco Munguía 402, Universidad., Toluca de Lerdo, C.P. 50130</p>");
+
+        // create DOM element for the marker
+        var el = document.createElement('div');
+        el.id = 'marker';
+        // create the marker Puebla
+        new mapboxgl.Marker(el)
+            .setLngLat(amaranta)
+            .setPopup(popup) // sets a popup on this marker
+            .addTo(map);
     </script>
 
-
-
-</body>
-
-</html>
+</body></html>
